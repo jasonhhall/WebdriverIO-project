@@ -9,7 +9,16 @@ module.exports = class Basepage {
     */
     open (path) {
         return browser.url(`http://demowebshop.tricentis.com/${path}`)
+
+   
     }
 
-    getTitle () { return $(document).attr('title'); }
+    // pageValidation (pageTitle){
+    //     let currentTitle = $(document).attr('title');
+    //     if( pageTitle != currentTitle){
+    //         throw 'Page Vaildation failed';
+    //     }
+    //     else 
+    //     console.log("The current page is "+currentTitle)
+    // }
 }
