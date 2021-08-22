@@ -9,14 +9,14 @@ class RegisterResultPage extends BasePage {
      */
     get registResult () { return $('div.result') }
     get btnContinue () { return $('.register-continue-button') }
-    get messageAlert () { return $('div.result') }
+    get messageAlert () { return $('div.result')}
    
 
     /**
      * 
      *
      */
-    getRegisterStatus () { return this.messageAlert.text() };
+  
     
     
 

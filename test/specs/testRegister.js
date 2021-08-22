@@ -2,14 +2,12 @@ const RegisterPage = require('../pageobjects/register.page');
 const RegisterResultPage = require('../pageobjects/register.result.page');
 
 describe('TEST Register Page', () => {
-    it('should register account with valid credentials', async () => {
+    it('Your registration completed', async () => {
         await RegisterPage.open();
-
-        await RegisterPage.register('M', 'Tom', 'Ford', 'tford565@test.com', '123456');
-     
+        let value = Math.floor(Math.random() * 100);
+        await RegisterPage.register('M', 'Tom', 'Ford', 'tomford'+value+'@test.com', '123456');
         await RegisterResultPage.open();
-        // await expect(RegisterResultPage.getRegisterStatus()).toHaveTextContaining('Your registration completed');
-        await new Promise(r => setTimeout(r, 10000));
+        await expect(RegisterResultPage.messageAlert).toHaveText('Your registration completed!');
 
     });
 });

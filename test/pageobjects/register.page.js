@@ -31,6 +31,7 @@ class RegisterPage extends BasePage {
         await this.inputFirstName.setValue(firstName);
         await this.inputLastName.setValue(lastName);
         await this.inputEmail.setValue(email);
+        console.log(email);
         await this.inputPassword.setValue(password);
         await this.inputConfirmPassword.setValue(password);
         await this.btnRegister.click();
