@@ -2,98 +2,81 @@
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "name" : "packages",
   "children" : [ {
-    "name" : "My Login application",
-    "children" : [ {
-      "name" : "should login with valid credentials",
-      "uid" : "1a62f4d277e7afc5",
-      "parentUid" : "f43874cc36d1c5833cbb332fc53460ce",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629692873243,
-        "stop" : 1629692878594,
-        "duration" : 5351
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    } ],
-    "uid" : "f43874cc36d1c5833cbb332fc53460ce"
-  }, {
     "name" : "TEST Register Page",
     "children" : [ {
       "name" : "Register a new account",
-      "uid" : "e4dfe49b43af482e",
+      "uid" : "b90cdf194b66bb16",
       "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
       "status" : "passed",
       "time" : {
-        "start" : 1629692873581,
-        "stop" : 1629692878488,
-        "duration" : 4907
+        "start" : 1629693069119,
+        "stop" : 1629693073797,
+        "duration" : 4678
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ "chrome-92.0.4515.159" ]
     }, {
       "name" : "TEST CASE 2",
-      "uid" : "b10dbd38ea38dba7",
+      "uid" : "e5b04db999a5fd5d",
       "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
       "status" : "passed",
       "time" : {
-        "start" : 1629692878489,
-        "stop" : 1629692881563,
-        "duration" : 3074
+        "start" : 1629693073797,
+        "stop" : 1629693077385,
+        "duration" : 3588
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ "chrome-92.0.4515.159" ]
     }, {
       "name" : "TEST CASE 3",
-      "uid" : "736181f760326cb8",
+      "uid" : "5b0329a5407b8b8f",
       "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
       "status" : "passed",
       "time" : {
-        "start" : 1629692881564,
-        "stop" : 1629692883924,
-        "duration" : 2360
+        "start" : 1629693077385,
+        "stop" : 1629693079797,
+        "duration" : 2412
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ "chrome-92.0.4515.159" ]
     }, {
       "name" : "TEST CASE 4",
-      "uid" : "af78a1bc17f0c541",
+      "uid" : "21ef2b90485985aa",
       "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
       "status" : "passed",
       "time" : {
-        "start" : 1629692883925,
-        "stop" : 1629692886580,
-        "duration" : 2655
+        "start" : 1629693079797,
+        "stop" : 1629693082281,
+        "duration" : 2484
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ "chrome-92.0.4515.159" ]
     }, {
       "name" : "TEST CASE 5",
-      "uid" : "e02c652648e7e71d",
+      "uid" : "1ef8683f1b237f98",
       "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
       "status" : "passed",
       "time" : {
-        "start" : 1629692886580,
-        "stop" : 1629692889215,
-        "duration" : 2635
+        "start" : 1629693082281,
+        "stop" : 1629693084834,
+        "duration" : 2553
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ "chrome-92.0.4515.159" ]
     }, {
       "name" : "THIS TEST SHOULD FAIL",
-      "uid" : "435ee44853d2a33c",
+      "uid" : "a16aaa9c6e18ccfa",
       "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
       "status" : "passed",
       "time" : {
-        "start" : 1629692889216,
-        "stop" : 1629692891652,
-        "duration" : 2436
+        "start" : 1629693084834,
+        "stop" : 1629693087211,
+        "duration" : 2377
       },
       "flaky" : false,
       "newFailed" : false,
@@ -101,16 +84,33 @@
     } ],
     "uid" : "3c8b2a7361047229a3aa256aa6c4d0e8"
   }, {
+    "name" : "My Login application",
+    "children" : [ {
+      "name" : "should login with valid credentials",
+      "uid" : "a5e49266aa1df140",
+      "parentUid" : "f43874cc36d1c5833cbb332fc53460ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629693069194,
+        "stop" : 1629693074790,
+        "duration" : 5596
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    } ],
+    "uid" : "f43874cc36d1c5833cbb332fc53460ce"
+  }, {
     "name" : "TEST CASE 2",
     "children" : [ {
       "name" : "should login with valid credentials",
-      "uid" : "d404b41fdc20945e",
+      "uid" : "5b17a739c4c7ebe3",
       "parentUid" : "088845c7b3db958bb5797ea139d2e66c",
       "status" : "passed",
       "time" : {
-        "start" : 1629692878614,
-        "stop" : 1629692881080,
-        "duration" : 2466
+        "start" : 1629693074813,
+        "stop" : 1629693077075,
+        "duration" : 2262
       },
       "flaky" : false,
       "newFailed" : false,
