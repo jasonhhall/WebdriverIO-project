@@ -1,5 +1,35 @@
 [ {
-  "uid" : "e5b04db999a5fd5d",
+  "uid" : "1d846d8855076017",
+  "name" : "TEST CASE 4",
+  "time" : {
+    "start" : 1629744415371,
+    "stop" : 1629744417742,
+    "duration" : 2371
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "53a3060fa90619d1",
+  "name" : "should login with valid credentials",
+  "time" : {
+    "start" : 1629744405144,
+    "stop" : 1629744411651,
+    "duration" : 6507
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4adf677996ed698e",
+  "name" : "TEST CASE 5",
+  "time" : {
+    "start" : 1629744417742,
+    "stop" : 1629744420012,
+    "duration" : 2270
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5f01b002f9217730",
   "name" : "TEST CASE 2",
   "time" : {
     "start" : 1629693073797,
@@ -9,27 +39,7 @@
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "1ef8683f1b237f98",
-  "name" : "TEST CASE 5",
-  "time" : {
-    "start" : 1629693082281,
-    "stop" : 1629693084834,
-    "duration" : 2553
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "21ef2b90485985aa",
-  "name" : "TEST CASE 4",
-  "time" : {
-    "start" : 1629693079797,
-    "stop" : 1629693082281,
-    "duration" : 2484
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b90cdf194b66bb16",
+  "uid" : "4dde997355fa400c",
   "name" : "Register a new account",
   "time" : {
     "start" : 1629693069119,
@@ -39,7 +49,57 @@
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "a5e49266aa1df140",
+  "uid" : "4b2119ad8f9bfdfc",
+  "name" : "TEST CASE 5",
+  "time" : {
+    "start" : 1629693082281,
+    "stop" : 1629693084834,
+    "duration" : 2553
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "89105ec9164f2f3f",
+  "name" : "should login with valid credentials",
+  "time" : {
+    "start" : 1629744411679,
+    "stop" : 1629744414234,
+    "duration" : 2555
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f1e3da6ab79b66a",
+  "name" : "APi Test 1",
+  "time" : {
+    "start" : 1629744404172,
+    "stop" : 1629744404184,
+    "duration" : 12
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "7db106d7f98fd3eb",
+  "name" : "TEST CASE 3",
+  "time" : {
+    "start" : 1629693077385,
+    "stop" : 1629693079797,
+    "duration" : 2412
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bb438c19c730366a",
+  "name" : "TEST CASE 3",
+  "time" : {
+    "start" : 1629744411951,
+    "stop" : 1629744415371,
+    "duration" : 3420
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "777e07ce718273b8",
   "name" : "should login with valid credentials",
   "time" : {
     "start" : 1629693069194,
@@ -49,7 +109,47 @@
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "a16aaa9c6e18ccfa",
+  "uid" : "3659636c3732467d",
+  "name" : "TEST CASE 2",
+  "time" : {
+    "start" : 1629744409411,
+    "stop" : 1629744411951,
+    "duration" : 2540
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1d4a7a2d24cbb54b",
+  "name" : "Register a new account",
+  "time" : {
+    "start" : 1629744405074,
+    "stop" : 1629744409411,
+    "duration" : 4337
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fcba0e7dd11a0dad",
+  "name" : "THIS TEST SHOULD FAIL",
+  "time" : {
+    "start" : 1629744420012,
+    "stop" : 1629744422208,
+    "duration" : 2196
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7dc299e770d67bd3",
+  "name" : "TEST CASE 4",
+  "time" : {
+    "start" : 1629693079797,
+    "stop" : 1629693082281,
+    "duration" : 2484
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2daaf0cd1037b16",
   "name" : "THIS TEST SHOULD FAIL",
   "time" : {
     "start" : 1629693084834,
@@ -59,22 +159,12 @@
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "5b17a739c4c7ebe3",
+  "uid" : "b80460f30956ddbe",
   "name" : "should login with valid credentials",
   "time" : {
     "start" : 1629693074813,
     "stop" : 1629693077075,
     "duration" : 2262
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5b0329a5407b8b8f",
-  "name" : "TEST CASE 3",
-  "time" : {
-    "start" : 1629693077385,
-    "stop" : 1629693079797,
-    "duration" : 2412
   },
   "status" : "passed",
   "severity" : "normal"
