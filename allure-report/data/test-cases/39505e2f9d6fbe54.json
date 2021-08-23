@@ -1,0 +1,56 @@
+{
+  "uid" : "39505e2f9d6fbe54",
+  "name" : "THIS TEST SHOULD FAIL",
+  "fullName" : "TEST Register Page.THIS TEST SHOULD FAIL",
+  "historyId" : "acc235db635d919e709fd599235fd6a5",
+  "time" : {
+    "start" : 1629689546321,
+    "stop" : 1629689548891,
+    "duration" : 2570
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "TEST Register Page"
+  }, {
+    "name" : "testClass",
+    "value" : "TEST Register Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "THIS TEST SHOULD FAIL"
+  }, {
+    "name" : "package",
+    "value" : "TEST Register Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-92.0.4515.159"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "39505e2f9d6fbe54.json",
+  "parameterValues" : [ "chrome-92.0.4515.159" ]
+}

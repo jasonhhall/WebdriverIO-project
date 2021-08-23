@@ -4,16 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "all":"npx wdio run ./wdio.conf.js ",
+    "spec":"npx wdio run ./wdio.conf.js --spec",
+    "suite":"npx wdio run ./wdio.conf.js --suite", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@wdio/allure-reporter": "^7.10.0",
     "@wdio/cli": "",
     "@wdio/local-runner": "",
     "@wdio/mocha-framework": "",
     "@wdio/spec-reporter": "",
+    "allure-commandline": "^2.13.8",
     "chromedriver": "",
     "wdio-chromedriver-service": ""
   }

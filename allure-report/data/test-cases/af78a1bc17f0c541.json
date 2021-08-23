@@ -1,0 +1,98 @@
+{
+  "uid" : "af78a1bc17f0c541",
+  "name" : "TEST CASE 4",
+  "fullName" : "TEST Register Page.TEST CASE 4",
+  "historyId" : "7c53cfb910411b39d8aacedf9334d1e0",
+  "time" : {
+    "start" : 1629692883925,
+    "stop" : 1629692886580,
+    "duration" : 2655
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "TEST Register Page"
+  }, {
+    "name" : "testClass",
+    "value" : "TEST Register Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "TEST CASE 4"
+  }, {
+    "name" : "package",
+    "value" : "TEST Register Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-92.0.4515.159"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "60cbd210a6754908",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629692829902,
+        "stop" : 1629692832499,
+        "duration" : 2597
+      }
+    }, {
+      "uid" : "4848675d3a5c4d32",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629692771107,
+        "stop" : 1629692773825,
+        "duration" : 2718
+      }
+    }, {
+      "uid" : "bdd0a51deecd5cb3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629691893851,
+        "stop" : 1629691896880,
+        "duration" : 3029
+      }
+    }, {
+      "uid" : "78fc1d7b8b86c62e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629689540724,
+        "stop" : 1629689543646,
+        "duration" : 2922
+      }
+    }, {
+      "uid" : "e1d27a653d98aa68",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629685812330,
+        "stop" : 1629685814942,
+        "duration" : 2612
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "af78a1bc17f0c541.json",
+  "parameterValues" : [ "chrome-92.0.4515.159" ]
+}

@@ -1,0 +1,56 @@
+{
+  "uid" : "88951774643b4f5b",
+  "name" : "TEST CASE 5",
+  "fullName" : "TEST Register Page.TEST CASE 5",
+  "historyId" : "5ee8773b395f3acb22854336ca5f17d",
+  "time" : {
+    "start" : 1629692773825,
+    "stop" : 1629692776335,
+    "duration" : 2510
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "TEST Register Page"
+  }, {
+    "name" : "testClass",
+    "value" : "TEST Register Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "TEST CASE 5"
+  }, {
+    "name" : "package",
+    "value" : "TEST Register Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-92.0.4515.159"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "88951774643b4f5b.json",
+  "parameterValues" : [ "chrome-92.0.4515.159" ]
+}
