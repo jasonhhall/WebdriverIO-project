@@ -1,170 +1,40 @@
 [ {
-  "uid" : "1d846d8855076017",
-  "name" : "TEST CASE 4",
+  "uid" : "7ca2a1f29201f737",
+  "name" : "should allow access with correct creds",
   "time" : {
-    "start" : 1629744415371,
-    "stop" : 1629744417742,
-    "duration" : 2371
+    "start" : 1629780600889,
+    "stop" : 1629780603827,
+    "duration" : 2938
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "53a3060fa90619d1",
-  "name" : "should login with valid credentials",
+  "uid" : "8ab5e6cbdd0bfc",
+  "name" : "should deny access with wrong creds",
   "time" : {
-    "start" : 1629744405144,
-    "stop" : 1629744411651,
-    "duration" : 6507
+    "start" : 1629780596500,
+    "stop" : 1629780600887,
+    "duration" : 4387
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "4adf677996ed698e",
-  "name" : "TEST CASE 5",
-  "time" : {
-    "start" : 1629744417742,
-    "stop" : 1629744420012,
-    "duration" : 2270
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5f01b002f9217730",
-  "name" : "TEST CASE 2",
-  "time" : {
-    "start" : 1629693073797,
-    "stop" : 1629693077385,
-    "duration" : 3588
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4dde997355fa400c",
+  "uid" : "cbe84fd745ef707f",
   "name" : "Register a new account",
   "time" : {
-    "start" : 1629693069119,
-    "stop" : 1629693073797,
-    "duration" : 4678
+    "start" : 1629780596683,
+    "stop" : 1629780603325,
+    "duration" : 6642
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "4b2119ad8f9bfdfc",
-  "name" : "TEST CASE 5",
-  "time" : {
-    "start" : 1629693082281,
-    "stop" : 1629693084834,
-    "duration" : 2553
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "89105ec9164f2f3f",
-  "name" : "should login with valid credentials",
-  "time" : {
-    "start" : 1629744411679,
-    "stop" : 1629744414234,
-    "duration" : 2555
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "9f1e3da6ab79b66a",
+  "uid" : "e6f2ef5659fffb74",
   "name" : "APi Test 1",
   "time" : {
-    "start" : 1629744404172,
-    "stop" : 1629744404184,
-    "duration" : 12
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "7db106d7f98fd3eb",
-  "name" : "TEST CASE 3",
-  "time" : {
-    "start" : 1629693077385,
-    "stop" : 1629693079797,
-    "duration" : 2412
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "bb438c19c730366a",
-  "name" : "TEST CASE 3",
-  "time" : {
-    "start" : 1629744411951,
-    "stop" : 1629744415371,
-    "duration" : 3420
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "777e07ce718273b8",
-  "name" : "should login with valid credentials",
-  "time" : {
-    "start" : 1629693069194,
-    "stop" : 1629693074790,
-    "duration" : 5596
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3659636c3732467d",
-  "name" : "TEST CASE 2",
-  "time" : {
-    "start" : 1629744409411,
-    "stop" : 1629744411951,
-    "duration" : 2540
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1d4a7a2d24cbb54b",
-  "name" : "Register a new account",
-  "time" : {
-    "start" : 1629744405074,
-    "stop" : 1629744409411,
-    "duration" : 4337
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fcba0e7dd11a0dad",
-  "name" : "THIS TEST SHOULD FAIL",
-  "time" : {
-    "start" : 1629744420012,
-    "stop" : 1629744422208,
-    "duration" : 2196
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7dc299e770d67bd3",
-  "name" : "TEST CASE 4",
-  "time" : {
-    "start" : 1629693079797,
-    "stop" : 1629693082281,
-    "duration" : 2484
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2daaf0cd1037b16",
-  "name" : "THIS TEST SHOULD FAIL",
-  "time" : {
-    "start" : 1629693084834,
-    "stop" : 1629693087211,
-    "duration" : 2377
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b80460f30956ddbe",
-  "name" : "should login with valid credentials",
-  "time" : {
-    "start" : 1629693074813,
-    "stop" : 1629693077075,
-    "duration" : 2262
+    "start" : 1629780595351,
+    "stop" : 1629780595505,
+    "duration" : 154
   },
   "status" : "passed",
   "severity" : "normal"

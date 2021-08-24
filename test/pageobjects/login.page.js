@@ -1,33 +1,22 @@
-const BasePage = require('./base.page');
+const Page = require('./page');
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
-class LoginPage extends BasePage {
-    /**
-     * define selectors using getter methods
-     */
-    get inputEmail () { return $('#Email') }
-    get inputPassword () { return $('#Password') }
-    get btnLogin () { return $('.login-button') }
+class LoginPage extends Page {
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async login (email, password) {
-        await this.inputEmail.setValue(email);
-        await this.inputPassword.setValue(password);
-        await this.btnLogin.click();
+    get username () { return $('#Email') }
+    get password () { return $('#Password') }
+    get LoginBtn () { return $('.login-button') }
+    get flash () { return $('div.message-error span') }
+    get headerLinks () { return $$('#header a') }
+    get customerInfo () { return $('div.header-links ul li:nth-child(1) a') }
+
+    async open () {
+        await super.open('login')
     }
 
-    /**
-     * overwrite specifc options to adapt it to page object
-     */
-    open () {
-        return super.open('login');
+    async login () {
+        await this.LoginBtn.click()
     }
-    
+
 }
 
 module.exports = new LoginPage();

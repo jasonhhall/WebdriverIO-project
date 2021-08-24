@@ -1,9 +1,9 @@
-const BasePage = require('./base.page');
+const Page = require('./page');
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class RegisterPage extends BasePage {
+class RegisterPage extends Page {
     /**
      * define selectors using getter methods
      */
@@ -15,12 +15,14 @@ class RegisterPage extends BasePage {
     get inputPassword () { return $('#Password') }
     get inputConfirmPassword () { return $('#ConfirmPassword') }
     get btnRegister () { return $('#register-button')}
+    get message () {return $('div.page-body div.result')}
+    get btnContinue () { return $('.register-continue-button') }
 
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async register (gender, firstName, lastName, email, password) {
+    async registerAccount (gender, firstName, lastName, email, password) {
 
         if(gender == 'M' || gender == 'm'){
             await this.btnGenderMale.click();
@@ -43,6 +45,8 @@ class RegisterPage extends BasePage {
     open () {
         return super.open('register');
     }
+
+    continue(){ btnContinue.click() }
     
 }
 

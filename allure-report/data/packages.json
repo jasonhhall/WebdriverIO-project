@@ -2,241 +2,68 @@
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "name" : "packages",
   "children" : [ {
-    "name" : "TEST Register Page",
-    "children" : [ {
-      "name" : "Register a new account",
-      "uid" : "4dde997355fa400c",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629693069119,
-        "stop" : 1629693073797,
-        "duration" : 4678
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    }, {
-      "name" : "TEST CASE 2",
-      "uid" : "5f01b002f9217730",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629693073797,
-        "stop" : 1629693077385,
-        "duration" : 3588
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    }, {
-      "name" : "TEST CASE 3",
-      "uid" : "7db106d7f98fd3eb",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629693077385,
-        "stop" : 1629693079797,
-        "duration" : 2412
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    }, {
-      "name" : "TEST CASE 4",
-      "uid" : "7dc299e770d67bd3",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629693079797,
-        "stop" : 1629693082281,
-        "duration" : 2484
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    }, {
-      "name" : "TEST CASE 5",
-      "uid" : "4b2119ad8f9bfdfc",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629693082281,
-        "stop" : 1629693084834,
-        "duration" : 2553
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    }, {
-      "name" : "THIS TEST SHOULD FAIL",
-      "uid" : "2daaf0cd1037b16",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629693084834,
-        "stop" : 1629693087211,
-        "duration" : 2377
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    }, {
-      "name" : "Register a new account",
-      "uid" : "1d4a7a2d24cbb54b",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629744405074,
-        "stop" : 1629744409411,
-        "duration" : 4337
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "Chrome-92.0.4515.159" ]
-    }, {
-      "name" : "TEST CASE 2",
-      "uid" : "3659636c3732467d",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629744409411,
-        "stop" : 1629744411951,
-        "duration" : 2540
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "Chrome-92.0.4515.159" ]
-    }, {
-      "name" : "TEST CASE 3",
-      "uid" : "bb438c19c730366a",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629744411951,
-        "stop" : 1629744415371,
-        "duration" : 3420
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "Chrome-92.0.4515.159" ]
-    }, {
-      "name" : "TEST CASE 4",
-      "uid" : "1d846d8855076017",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629744415371,
-        "stop" : 1629744417742,
-        "duration" : 2371
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "Chrome-92.0.4515.159" ]
-    }, {
-      "name" : "TEST CASE 5",
-      "uid" : "4adf677996ed698e",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629744417742,
-        "stop" : 1629744420012,
-        "duration" : 2270
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "Chrome-92.0.4515.159" ]
-    }, {
-      "name" : "THIS TEST SHOULD FAIL",
-      "uid" : "fcba0e7dd11a0dad",
-      "parentUid" : "3c8b2a7361047229a3aa256aa6c4d0e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629744420012,
-        "stop" : 1629744422208,
-        "duration" : 2196
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "Chrome-92.0.4515.159" ]
-    } ],
-    "uid" : "3c8b2a7361047229a3aa256aa6c4d0e8"
-  }, {
-    "name" : "My Login application",
-    "children" : [ {
-      "name" : "should login with valid credentials",
-      "uid" : "777e07ce718273b8",
-      "parentUid" : "f43874cc36d1c5833cbb332fc53460ce",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629693069194,
-        "stop" : 1629693074790,
-        "duration" : 5596
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    }, {
-      "name" : "should login with valid credentials",
-      "uid" : "53a3060fa90619d1",
-      "parentUid" : "f43874cc36d1c5833cbb332fc53460ce",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629744405144,
-        "stop" : 1629744411651,
-        "duration" : 6507
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "Chrome-92.0.4515.159" ]
-    } ],
-    "uid" : "f43874cc36d1c5833cbb332fc53460ce"
-  }, {
-    "name" : "TEST CASE 2",
-    "children" : [ {
-      "name" : "should login with valid credentials",
-      "uid" : "b80460f30956ddbe",
-      "parentUid" : "088845c7b3db958bb5797ea139d2e66c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629693074813,
-        "stop" : 1629693077075,
-        "duration" : 2262
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    }, {
-      "name" : "should login with valid credentials",
-      "uid" : "89105ec9164f2f3f",
-      "parentUid" : "088845c7b3db958bb5797ea139d2e66c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629744411679,
-        "stop" : 1629744414234,
-        "duration" : 2555
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "Chrome-92.0.4515.159" ]
-    } ],
-    "uid" : "088845c7b3db958bb5797ea139d2e66c"
-  }, {
     "name" : "Test API",
     "children" : [ {
       "name" : "APi Test 1",
-      "uid" : "9f1e3da6ab79b66a",
+      "uid" : "e6f2ef5659fffb74",
       "parentUid" : "52520799378f51eb54458cf44aa349ce",
-      "status" : "broken",
+      "status" : "passed",
       "time" : {
-        "start" : 1629744404172,
-        "stop" : 1629744404184,
-        "duration" : 12
+        "start" : 1629780595351,
+        "stop" : 1629780595505,
+        "duration" : 154
       },
       "flaky" : false,
       "newFailed" : false,
-      "parameters" : [ "Chrome-92.0.4515.159" ]
+      "parameters" : [ "chrome-92.0.4515.159" ]
     } ],
     "uid" : "52520799378f51eb54458cf44aa349ce"
+  }, {
+    "name" : "TEST LOGIN PAGE",
+    "children" : [ {
+      "name" : "should deny access with wrong creds",
+      "uid" : "8ab5e6cbdd0bfc",
+      "parentUid" : "8eb9cfe659365b681f5e4cb54540176c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629780596500,
+        "stop" : 1629780600887,
+        "duration" : 4387
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    }, {
+      "name" : "should allow access with correct creds",
+      "uid" : "7ca2a1f29201f737",
+      "parentUid" : "8eb9cfe659365b681f5e4cb54540176c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629780600889,
+        "stop" : 1629780603827,
+        "duration" : 2938
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    } ],
+    "uid" : "8eb9cfe659365b681f5e4cb54540176c"
+  }, {
+    "name" : "TEST REGISTER PAGE",
+    "children" : [ {
+      "name" : "Register a new account",
+      "uid" : "cbe84fd745ef707f",
+      "parentUid" : "851002e4543a859bc8589d71a49e693e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629780596683,
+        "stop" : 1629780603325,
+        "duration" : 6642
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    } ],
+    "uid" : "851002e4543a859bc8589d71a49e693e"
   } ]
 }
