@@ -6,8 +6,7 @@
   "scripts": {
     "all": "npx wdio run ./wdio.conf.js ",
     "spec": "npx wdio run ./wdio.conf.js --spec",
-    "suite": "npx wdio run ./wdio.conf.js --suite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "suite": "npx wdio run ./wdio.conf.js --suite"
   },
   "keywords": [],
   "author": "",

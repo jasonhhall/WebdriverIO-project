@@ -5,13 +5,13 @@
     "name" : "Test API",
     "children" : [ {
       "name" : "APi Test 1",
-      "uid" : "e6f2ef5659fffb74",
+      "uid" : "b8e28d42c1fff709",
       "parentUid" : "f80cdd719d1b87bd5e4a42f0a4e3ac06",
       "status" : "passed",
       "time" : {
-        "start" : 1629780595351,
-        "stop" : 1629780595505,
-        "duration" : 154
+        "start" : 1629816723066,
+        "stop" : 1629816723286,
+        "duration" : 220
       },
       "flaky" : false,
       "newFailed" : false,
@@ -19,51 +19,51 @@
     } ],
     "uid" : "f80cdd719d1b87bd5e4a42f0a4e3ac06"
   }, {
-    "name" : "TEST LOGIN PAGE",
-    "children" : [ {
-      "name" : "should deny access with wrong creds",
-      "uid" : "8ab5e6cbdd0bfc",
-      "parentUid" : "de60295edfbb522a19d3b2bf6afdad87",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629780596500,
-        "stop" : 1629780600887,
-        "duration" : 4387
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    }, {
-      "name" : "should allow access with correct creds",
-      "uid" : "7ca2a1f29201f737",
-      "parentUid" : "de60295edfbb522a19d3b2bf6afdad87",
-      "status" : "passed",
-      "time" : {
-        "start" : 1629780600889,
-        "stop" : 1629780603827,
-        "duration" : 2938
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ "chrome-92.0.4515.159" ]
-    } ],
-    "uid" : "de60295edfbb522a19d3b2bf6afdad87"
-  }, {
     "name" : "TEST REGISTER PAGE",
     "children" : [ {
       "name" : "Register a new account",
-      "uid" : "cbe84fd745ef707f",
+      "uid" : "db1d68c026955d71",
       "parentUid" : "48e0abd3cfb59921d0857a589d6bec6b",
       "status" : "passed",
       "time" : {
-        "start" : 1629780596683,
-        "stop" : 1629780603325,
-        "duration" : 6642
+        "start" : 1629816723962,
+        "stop" : 1629816728540,
+        "duration" : 4578
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ "chrome-92.0.4515.159" ]
     } ],
     "uid" : "48e0abd3cfb59921d0857a589d6bec6b"
+  }, {
+    "name" : "TEST LOGIN PAGE",
+    "children" : [ {
+      "name" : "should deny access with wrong creds",
+      "uid" : "d7765cb6b4152681",
+      "parentUid" : "de60295edfbb522a19d3b2bf6afdad87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629816724141,
+        "stop" : 1629816727840,
+        "duration" : 3699
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    }, {
+      "name" : "should allow access with correct creds",
+      "uid" : "ddc2aaf922e46da",
+      "parentUid" : "de60295edfbb522a19d3b2bf6afdad87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629816727841,
+        "stop" : 1629816731937,
+        "duration" : 4096
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    } ],
+    "uid" : "de60295edfbb522a19d3b2bf6afdad87"
   } ]
 }

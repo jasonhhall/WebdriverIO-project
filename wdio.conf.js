@@ -28,10 +28,13 @@ exports.config = {
     // define specific suites
     suites: {
         login: [
-            './test/specs/testLogin.js'
+            './test/specs/login.spec.js'
         ],
         register: [
-            './test/specs/testRegister.js'
+            './test/specs/register.spec.js'
+        ],
+        api: [
+            './test/specs/api.spec.js'
         ]
     },
     // Patterns to exclude.
