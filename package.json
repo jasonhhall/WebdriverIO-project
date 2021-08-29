@@ -2,11 +2,12 @@
   "name": "webdriverIO-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./node_modules/.bin/wdio",
   "scripts": {
     "all": "npx wdio run ./wdio.conf.js ",
     "spec": "npx wdio run ./wdio.conf.js --spec",
-    "suite": "npx wdio run ./wdio.conf.js --suite"
+    "suite": "npx wdio run ./wdio.conf.js --suite",
+    "test-local":"npx wdio run ./test/config/wdio.local.conf.js"
   },
   "keywords": [],
   "author": "",

@@ -1,40 +1,40 @@
 [ {
-  "uid" : "b8e28d42c1fff709",
-  "name" : "APi Test 1",
-  "time" : {
-    "start" : 1629816723066,
-    "stop" : 1629816723286,
-    "duration" : 220
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ddc2aaf922e46da",
-  "name" : "should allow access with correct creds",
-  "time" : {
-    "start" : 1629816727841,
-    "stop" : 1629816731937,
-    "duration" : 4096
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d7765cb6b4152681",
+  "uid" : "eb8f6853d3449ea2",
   "name" : "should deny access with wrong creds",
   "time" : {
-    "start" : 1629816724141,
-    "stop" : 1629816727840,
-    "duration" : 3699
+    "start" : 1630208266963,
+    "stop" : 1630208270462,
+    "duration" : 3499
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "db1d68c026955d71",
+  "uid" : "5002a1f9e28b9626",
+  "name" : "APi Test 1",
+  "time" : {
+    "start" : 1630206290841,
+    "stop" : 1630206290910,
+    "duration" : 69
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2e9de10ad9cb6ec5",
+  "name" : "should allow access with correct creds",
+  "time" : {
+    "start" : 1630208270463,
+    "stop" : 1630208273923,
+    "duration" : 3460
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "af0e0478e2c571c6",
   "name" : "Register a new account",
   "time" : {
-    "start" : 1629816723962,
-    "stop" : 1629816728540,
-    "duration" : 4578
+    "start" : 1630208266654,
+    "stop" : 1630208271517,
+    "duration" : 4863
   },
   "status" : "passed",
   "severity" : "normal"
