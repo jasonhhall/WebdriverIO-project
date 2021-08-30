@@ -4,10 +4,9 @@
   "description": "",
   "main": "./node_modules/.bin/wdio",
   "scripts": {
-    "all": "npx wdio run ./wdio.conf.js ",
-    "spec": "npx wdio run ./wdio.conf.js --spec",
-    "suite": "npx wdio run ./wdio.conf.js --suite",
-    "test-local":"npx wdio run ./test/config/wdio.local.conf.js"
+    "test": "npx wdio run ./test/config/wdio.local.conf.js",
+    "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",
+    "allure-report": "allure generate allure-results --clean && allure serve"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +19,8 @@
     "@wdio/spec-reporter": "^7.10.1",
     "allure-commandline": "^2.13.8",
     "chromedriver": "^92.0.1",
+    "node-excel-to-json": "^0.0.3",
+    "underscore": "^1.13.1",
     "wdio-chromedriver-service": "^7.2.0",
     "wdio-intercept-service": "^4.1.7"
   }
