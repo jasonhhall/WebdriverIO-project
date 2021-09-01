@@ -4,9 +4,11 @@
  **/
 /****************************************************************************************/
 
-// var xls_json  = require(	'node-excel-to-json');
+var xls_json  = require(	'node-excel-to-json');
+const XLSX = require('xlsx');
 module.exports = {
 
+  
   /***************************************************************************************/
   /*
    * method isEquals ( x, y )
@@ -233,24 +235,24 @@ module.exports = {
    * Turn any xls or xlsx file or OpenDocument Spreadsheet (ODS) into a clean JSON file or Javascript Object.
    **/
   /****************************************************************************************/
-  // excel_getTableRow : function (fileName, sheetName, columnName, where, callback){
-  //   	xls_json(fileName, {
-  //       'convert_all_sheet': false,
-  //       'return_type': 'Object',
-  //       'sheetName': sheetName
-  //     }, function(err, result) {
-  //     		  if(err) {
-  //       		    console.error(err);
-  //     		  } else if (result){
-  //     			     for(var row = 0; row < result.length; ++row){
-  //      				         if (result[row].hasOwnProperty(columnName) && (result[row][columnName] == where)){
-  //       				             //console.log(result[row]);
-  //       				              callback(result[row]);
-  //       			          }
-  //   			        }
-  //       	    }
-  //   	    });
-  // },
+  excel_getTableRow : function (fileName, sheetName, columnName, where, callback){
+    	xls_json(fileName, {
+        'convert_all_sheet': false,
+        'return_type': 'Object',
+        'sheetName': sheetName
+      }, function(err, result) {
+      		  if(err) {
+        		    console.error(err);
+      		  } else if (result){
+      			     for(var row = 0; row < result.length; ++row){
+       				         if (result[row].hasOwnProperty(columnName) && (result[row][columnName] == where)){
+        				             //console.log(result[row]);
+        				              callback(result[row]);
+        			          }
+    			        }
+        	    }
+    	    });
+  },
 
   /***************************************************************************************/
   /*
@@ -262,20 +264,20 @@ module.exports = {
    * Turn any xls or xlsx file or OpenDocument Spreadsheet (ODS) into a clean JSON file or Javascript Object.
    **/
   /****************************************************************************************/
-  // excel_getTableRows : function (fileName, sheetName, callback){
-  //     xls_json(fileName, {
-  //       'convert_all_sheet': false,
-  //       'return_type': 'Object',
-  //       'sheetName': sheetName
-  //     }, function(err, result) {
-  //   		    if(err) {
-  //     		      console.error(err);
-  //   		    } else if (result){
-  //   			      //console.log(result);
-  //   			      return callback(result);
-  //     		    }
-  // 	    });
-  // },
+  excel_getTableRows : function (fileName, sheetName, callback){
+      xls_json(fileName, {
+        'convert_all_sheet': false,
+        'return_type': 'Object',
+        'sheetName': sheetName
+      }, function(err, result) {
+    		    if(err) {
+      		      console.error(err);
+    		    } else if (result){
+    			      //console.log(result);
+    			      return callback(result);
+      		    }
+  	    });
+  },
 
   /***************************************************************************************/
   /*
@@ -286,20 +288,46 @@ module.exports = {
    * Turn any xls or xlsx file or OpenDocument Spreadsheet (ODS) into a clean JSON file or Javascript Object.
    **/
   /****************************************************************************************/
-  // excel_getAllSheetData : function (fileName, callback){
-  //     xls_json(fileName, {
-  //       'convert_all_sheet': true,
-  //       'return_type': 'Object',
-  //     }, function(err, result) {
-  //   		    if(err) {
-  //     		      console.error(err);
-  //   		    } else if (result){
-  //   			      //console.log(result);
-  //   			      return callback(result);
-  //     		    }
-  // 	    });
-  // },
+  excel_getAllSheetData : function (fileName, callback){
+      xls_json(fileName, {
+        'convert_all_sheet': true,
+        'return_type': 'Object',
+      }, function(err, result) {
+    		    if(err) {
+      		      console.error(err);
+    		    } else if (result){
+    			      //console.log(result);
+    			      return callback(result);
+      		    }
+  	    });
+  },
 
+  /***************************************************************************************/
+  /* method to converts an array of JS objects to a worksheet.
+   * @param {jsonData} - [{header1:"rowVal1", header2:"rowVal1", header3:"rowVal1"}]
+   * @param {return}  excel worksheet object 
+   **/
+  /****************************************************************************************/
+  json_to_excel_sheet : function (jsonData) { return XLSX.utils.json_to_sheet(jsonData) },
+
+  /***************************************************************************************/
+  /* method to add the worksheet to the workbook 
+  ******************************************************************************************
+  * @param {wb} workbook object to add the sheet
+  * @param {ws} worksheet to add
+  * @param {sheetNmame} the name of the sheet
+  /****************************************************************************************/
+  append_sheet_to_workbook : function (wb, ws, sheetName) {
+    XLSX.utils.book_append_sheet(wb, ws, sheetName)
+  },
+
+  /***************************************************************************************/
+  /* method to write the workbook wb object to .xlsx file 
+  ******************************************************************************************
+  * @param {wb} workbook object 
+  * @param {sheetNmame} location to save .xlsx file
+  /****************************************************************************************/
+  workbook_to_excel_file: function (wb, fileDestination) { XLSX.writeFile(wb, fileDestination) },
 
 /***************************************************************************************/
   //method to generate timestamp in the format: mm/dd/yy hh:mi:ss

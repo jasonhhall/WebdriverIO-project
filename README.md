@@ -188,10 +188,10 @@ WebdriverIO
 
 ## Project Naming Conventions
 ---
-There are four strategies of naming files in JavaScript: PascalCase, camelCase, UPPERCASE, and kebab-case.
+There are four strategies of naming files in JavaScript: `PascalCase`, `camelCase`, `UPPERCASE`, and `kebab-case`.
 
 ---
-### `FILES`
+### `FILE NAMES`
 We will use `kebe-case`
 ```
 │   ├── page/
@@ -205,7 +205,7 @@ We will use `kebe-case`
 │       └── common-utilities.js
 ```
 ---
-### `FUNCTION`
+### `FUNCTION NAMES`
 
 JavaScript functions will be written in `camelCase`. In addition, it's a best practice to actually tell what the function is doing by giving the function name a verb as prefix. This verb as prefix can be anything (e.g. get, fetch, push, apply, calculate, compute, post).
 
@@ -242,7 +242,7 @@ var encryption = true;
 var hasEncryption = true;
 ```
 ---
-### `CLASS`
+### `CLASS NAMES`
 We will use `PascalCase `
 ```javascript
 class SoftwareDeveloper {
@@ -255,7 +255,7 @@ class SoftwareDeveloper {
 var me = new SoftwareDeveloper('Robin', 'Wieruch');
 ```
 ---
-### `METHODS`
+### `METHODS NAMES`
 Identical to JavaScript functions, a method on a JavaScript class is declared with `camelCase`. It's a best practice to actually tell what the method is doing by giving the function name a verb as prefix.
 
 ```javascript
@@ -298,8 +298,8 @@ var DAYS_UNTIL_TOMORROW = 1;
 *A global JavaScript variable is written in `UPPERCASE` if it is immutable.
 
 ---
-#### `LOCAL`
-Adding a prefix makes local varibles data type more self-descriptive.
+#### `LOCAL VARIABLES NAMES`
+Adding a **`prefix`** makes local varibles data type more self-descriptive.
 ```javascript
 var strFullName = "John Doe"; // String
 var numMinutes = 60; // int or float

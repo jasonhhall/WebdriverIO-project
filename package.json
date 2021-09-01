@@ -25,9 +25,11 @@
     "allure-commandline": "^2.13.8",
     "babel-eslint": "^10.1.0",
     "chromedriver": "^92.0.1",
+    "node-excel-to-json": "^0.0.3",
     "underscore": "^1.13.1",
     "wdio-chromedriver-service": "^7.2.0",
-    "wdio-intercept-service": "^4.1.7"
+    "wdio-intercept-service": "^4.1.7",
+    "xlsx": "^0.17.1"
   },
   "dependencies": {
     "chai": "^4.3.4",
