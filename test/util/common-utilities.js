@@ -329,6 +329,16 @@ module.exports = {
   /****************************************************************************************/
   workbook_to_excel_file: function (wb, fileDestination) { XLSX.writeFile(wb, fileDestination) },
 
+  /***************************************************************************************/
+  /* method to read excel file workbook  
+  ******************************************************************************************
+  * @param {xlsxFile} the file to read in 
+  * @return {workbook object} 
+  /****************************************************************************************/
+  readExcelFile : function (xlsxFile) {
+    if(typeof require !== 'undefined')
+    return XLSX.readFile(xlsxFile);
+  },
 /***************************************************************************************/
   //method to generate timestamp in the format: mm/dd/yy hh:mi:ss
 /***************************************************************************************/
