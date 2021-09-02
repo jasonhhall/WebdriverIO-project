@@ -1,5 +1,13 @@
 // //Sample example on how to use the library functions in your any.js file
- var  util  = require('../util/common-utilities');
+ const  util  = require('../util/common-utilities');
+ const data = [
+    {emp_id:"106", emp_name:"Jason", emp_dept:"IT"},
+    {emp_id:"102",emp_name: "Paul",emp_dept:"IT"},
+    {emp_id:"103",emp_name: "Vinita",emp_dept: "Testing"},
+    {emp_id:"105",emp_name: "Vinita",emp_dept: "Testing"}
+];
+
+ const  XLSX = require('xlsx');
 
 
 // util.excel_getTableRow(__dirname+'/sample.xlsx', 'info', 'emp_id', '101', function(results){
@@ -22,13 +30,7 @@
 
 //   util.writeFile("test.xlxs", __dirname+'/out.xlsx')
 
-// var data = [
-//     {emp_id:"106", emp_name:"Jason", emp_dept:"IT"},
-//     {emp_id:"102",emp_name: "Paul",emp_dept:"IT"},
-//     {emp_id:"103",emp_name: "Vinita",emp_dept: "Testing"},
-//     {emp_id:"105",emp_name: "Vinita",emp_dept: "Testing"}
-// ];
- XLSX = require('xlsx');
+
 
 //   /* generate workbook */
 //   // let wb = XLSX.utils.book_new();
