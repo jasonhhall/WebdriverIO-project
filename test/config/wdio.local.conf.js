@@ -1,4 +1,5 @@
 const allure = require('allure-commandline')
+const path = require('path')
 
 exports.config = {
     //
@@ -26,17 +27,9 @@ exports.config = {
         './test/specs/**/*.js'
     ],
     // define specific suites
-    suites: {
-        login: [
-            './test/specs/login.spec.js'
-        ],
-        register: [
-            './test/specs/register.spec.js'
-        ],
-        api: [
-            './test/specs/api.spec.js'
-        ]
-    },
+    // suites: {
+    //     login: ['./test/specs/login.spec.js' ]
+    // },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -71,7 +64,16 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
+        'goog:chromeOptions': {
+            args: [
+                '--no-sandbox',
+                '--disable-infobars',
+                '--headless',
+                '--disable-gpu',
+                '--window-size=1440,735'
+            ],
+        }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -84,7 +86,8 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'trace',
+    outputDir: path.resolve(__dirname, '../../logs'),
     //
     // Set specific log levels per logger
     // loggers:
@@ -124,7 +127,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver', 'intercept'],
+    services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -151,7 +154,13 @@ exports.config = {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false,
-    }]],
+    }], ['junit', {
+        outputDir: 'JUNIT',
+        outputFileFormat: function(options) { // optional
+            return `results-${options.cid}.${options.capabilities}.xml`
+        }
+    }]
+],
     
     //
     // Options to be passed to Mocha.
