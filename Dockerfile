@@ -1,7 +1,5 @@
-FROM ianwalter/puppeteer:latest
-WORKDIR /app
-ADD . /WebdriverIO-project
-
-RUN npm install
-
-CMD npx wdio run ./test/config/wdio.local.conf.js
+FROM skozo/webdriverio-chrome-headless
+WORKDIR /usr/local/app
+COPY . .
+RUN npm i
+CMD [ "/usr/local/app/node_modules/.bin/wdio ./usr/local/app/test/config/wdio.local.conf.js" ]
