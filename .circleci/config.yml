@@ -5,16 +5,12 @@ jobs:
     docker:
       - image: ianwalter/puppeteer:latest
     steps:
-      - checkout
-      
       - run:
           name: install packages
           command: npm install
-
       - run:
           name: Run Test
           command: yarn run test-remote
-
 workflows:
   orb-free-workflow:
     jobs:
