@@ -18,8 +18,7 @@ jobs:
           key: node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
           paths:
             - ~/.npm
-          
-           steps:
+            
       - run: mkdir ~/junit
       - run:
           command: mocha test --reporter mocha-junit-reporter
