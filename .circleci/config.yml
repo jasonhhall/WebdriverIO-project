@@ -5,10 +5,12 @@ jobs:
     docker:
       - image: ianwalter/puppeteer:latest
     steps:
+      - checkout
+      
       - run:
           name: install packages
           command: npm i
-            
+     
       - run: mkdir ~/junit
       - run:
           command: mocha test --reporter mocha-junit-reporter
