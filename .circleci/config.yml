@@ -18,12 +18,18 @@ jobs:
           key: node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
           paths:
             - ~/.npm
-      - run:
-          name: Run Tests
-          command: yarn run test-remote
           
+           steps:
+      - run: mkdir ~/junit
+      - run:
+          command: mocha test --reporter mocha-junit-reporter
+          environment:
+            MOCHA_FILE: ~/junit/test-results.xml
+          when: always
       - store_test_results:
-          path: /test/reports/junit-results
+          path: ~/junit
+      - store_artifacts:
+          path: ~/junit
 
 workflows:
   orb-free-workflow:
