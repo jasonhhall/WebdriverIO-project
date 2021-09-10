@@ -9,18 +9,11 @@ jobs:
       
       - run:
           name: install packages
-          command: npm i
-     
-      - run: mkdir ~/junit
+          command: npm install
+
       - run:
-          command: mocha test --reporter mocha-junit-reporter
-          environment:
-            MOCHA_FILE: ~/junit/test-results.xml
-          when: always
-      - store_test_results:
-          path: ~/junit
-      - store_artifacts:
-          path: ~/junit
+          name: Run Test
+          command: docker run --rm -ti test/app35 yarn run test-remote
 
 workflows:
   orb-free-workflow:
