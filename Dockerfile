@@ -1,7 +1,4 @@
 FROM ianwalter/puppeteer:latest
-WORKDIR /app
-ADD . /WebdriverIO-project
-
+WORKDIR /usr/local/app
+COPY . .
 RUN npm install
-
-CMD npx wdio run ./test/config/wdio.local.conf.js
