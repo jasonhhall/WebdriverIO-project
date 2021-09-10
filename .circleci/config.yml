@@ -21,6 +21,9 @@ jobs:
       - run:
           name: Run Tests
           command: yarn run test-remote
+          
+      - store_test_results:
+          path: /test/reports/junit-results
 
 workflows:
   orb-free-workflow:
