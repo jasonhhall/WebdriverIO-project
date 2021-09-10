@@ -6,7 +6,16 @@ const { config } = require('./wdio.shared.conf')
 exports.config = {
     ...config,
     ...{
-      services: ['selenium-standalone'],
+      services: ['selenium-standalone', 'docker'],
+      dockerOptions: {
+        image: 'selenium/standalone-chrome',
+        healthCheck: 'http://localhost:4444',
+        options: {
+            p: ['4444:4444'],
+            shmSize: '2g'
+        }
+    },
+    
       capabilities: [
           {
             maxInstances: 5,
