@@ -58,7 +58,7 @@ describe('TEST READ DATA FROM EXCEL SHEET', () => {
         let address_ws = workbook2.Sheets["info"]
         let data1 = util.convert_worksheet_to_json(info_ws)
         let data2 = util.convert_worksheet_to_json(address_ws)
-        assert.equal(data1[0].emp_id, data2[1].emp_id)
+        assert.equal(data1[0].emp_id, data2[0].emp_id)
     })
 
 
