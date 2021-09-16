@@ -11,9 +11,12 @@ jobs:
           name: install packages
           command: npm install
 
+     
+      - script: yarn run test-remote
       - run:
           name: Run Test
           command: yarn run test-remote
+     
 
 workflows:
   orb-free-workflow:
