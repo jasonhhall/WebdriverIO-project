@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="TEST SUITE 2 TEST CASES" timestamp="2021-09-15T21:24:35" time="0.182" tests="6" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="TEST SUITE 2 TEST CASES"/>
+      <property name="capabilities" value="chromeheadless.93_0_4577_82.win32"/>
+      <property name="file" value=".\test\specs\mySuite2.js"/>
+    </properties>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should be able to read data from worksheet" time="0.08"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should be able to read multilpe sheets from workbook" time="0.029"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should be able to read sheets from multilpe workbooks" time="0.047"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should display error message when reading from blank sheet" time="0.001"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should display error message when reading from blank workbook" time="0"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should display error message when file not found" time="0">
+      <system-out><![CDATA[
+COMMAND: deleteSession - {}
+RESULT: undefined
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
