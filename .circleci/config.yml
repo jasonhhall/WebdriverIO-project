@@ -13,7 +13,7 @@ jobs:
 
       - run:
           name: Run Test
-          command: yarn run test-remote --spec mySuite1.js
+          command: yarn run test-remote --spec mySuite1.js --spec mySuite2.js
 
 workflows:
   orb-free-workflow:
