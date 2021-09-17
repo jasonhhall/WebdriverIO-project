@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="TEST SUITE 6 TEST CASES" timestamp="2021-09-16T23:02:23" time="1.253" tests="6" failures="0" errors="0" skipped="0">
+  <testsuite name="TEST SUITE 6 TEST CASES" timestamp="2021-09-17T09:51:38" time="0.263" tests="6" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="TEST SUITE 6 TEST CASES"/>
-      <property name="capabilities" value="chrome.93_0_4577_82.win32"/>
+      <property name="capabilities" value="chromeheadless.93_0_4577_82.win32"/>
       <property name="file" value=".\test\specs\mySuite6.js"/>
     </properties>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should be able to read data from worksheet" time="0.199"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should be able to read multilpe sheets from workbook" time="0.103"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should be able to read sheets from multilpe workbooks" time="0.201"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should display error message when reading from blank sheet" time="0.003"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should display error message when reading from blank workbook" time="0.002"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should display error message when file not found" time="0.001">
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should be able to read data from worksheet" time="0.096"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should be able to read multilpe sheets from workbook" time="0.066"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should be able to read sheets from multilpe workbooks" time="0.066"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should display error message when reading from blank sheet" time="0.001"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should display error message when reading from blank workbook" time="0"/>
+    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_SUITE_6_TEST_CASES" name="should display error message when file not found" time="0.001">
       <system-out><![CDATA[
 COMMAND: deleteSession - {}
 RESULT: undefined
