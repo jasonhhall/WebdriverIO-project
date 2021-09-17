@@ -1,7 +1,8 @@
+const { config } = require('./wdio.shared.conf')
 const allure = require('allure-commandline')
 const path = require('path')
 
-const { config } = require('./wdio.shared.conf')
+
 
 exports.config = {
     ...config,
@@ -38,6 +39,20 @@ exports.config = {
         //   browserName: 'safari',
         // },
 
+      ],
+      // define specific suites
+    suites: {
+      suiteA: [
+          './test/specs/mySuite1.js',
+          './test/specs/mySuite2.js'
+      ],
+      suiteB: [
+        './test/specs/mySuite3.js',
+        './test/specs/mySuite4.js'
+    ],
+      otherFeature: [
+          // ...
       ]
+  },
     }
 }
