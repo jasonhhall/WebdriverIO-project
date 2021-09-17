@@ -75,8 +75,6 @@ To generate and view an allure report locally, run
  ```
  A typical Allure report will look like this
 
-   
-
 ![Allure Report Overview](img/report_overview.png)
 
 ![Allure Report Overview](img/tab_graphs.png)
