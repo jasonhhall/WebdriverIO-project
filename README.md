@@ -1,11 +1,4 @@
-# WebdriverIO Testing Framework with Mocha
-
-This repository contains a collection of the WebdriverIO project and libraries that demonstrate how to use the tool and develop automation script using the Mocha BDD framework. It uses the chromedriver NPM package that wraps the ChromeDriver for you. 
-
-It support ES6 (via babel-register) and uses `Grunt` to manage tasks, provides common utilities to support testing. It generate Spec, `JUNIT`, `Allure` reporters as well.
-
-
-<!-- ![Shallow Backup GIF Demo](img/shallow-backup-demo.gif) -->
+# AUTOMATION PROJECT 
 
 Contents
 ========
@@ -22,32 +15,40 @@ Contents
 
 
 ---
-## Installation
+## Getting Started
 
+This repository contains a collection of the WebdriverIO project and libraries and instructions that demonstrate how to use the tool and develop automation script using the Mocha BDD framework. It uses the chromedriver NPM package that wraps the ChromeDriver for you. 
+
+It support ES6 (via babel-register) and provides common utilities to support testing. It generate Spec, `JUNIT`, `Allure` reporters as well.
 
 This project is tested on `Node v12.0.0`.
 
-`Node.JS:` Install  from the site - https://nodejs.org/en/  take the LTS version based on your Operating system. Please make sure you install NodeJS globally. To take full advantage of the command line and use grunt tasks you will need to make sure that you have added `node_modules/.bin` to your `$PATH`.  Otherwise you will need to install `npm install -g  grunt-cli` globally.
+`Node.JS:` Install  from the site - https://nodejs.org/en/  take the LTS version based on your Operating system. Please make sure you install NodeJS globally. To take full advantage of the command line and use grunt tasks you will need to make sure that you have added `node_modules/.bin` to your `$PATH`.
 
 
-`JDK 1.8:` It is optional, install JDK 1.8+ and make sure class path is set properly. JAVA is require to start `Selenium Server` on your local environment nothing else.
+`JDK 1.8:` It is optional, install JDK 1.8+ and make sure class path is set properly. JAVA is require to start  `Selenium Server` on your local environment nothing else.
 
 ---
-## Run Tests
+### Installation
 
-To execute the entire test suite in local development, you can use any one of the options mentioned below
 
-Option 1: 
+---
+### Run Tests
+You can start your test suite by using the `run` command and pointing to a WebdriverIO config file
+
 ```
-npm run test
+npx wdio run ./test/config/wdio.local.conf.js
 ```
 
-Option 2: 
+If you like to run specific test files you can add a --spec parameter:
 ```
-grunt webdriver:test-local
+npx wdio run ./test/config/wdio.local.conf.js --spec login-spec.js
 ```
-This executes all spec files in the [`./test/specs/*.js`] directory.
-The default option for Grunt run is `webdriver:test-local`. 
+or define suites in your config file and run just the test files defined by in a suite:
+```
+npx wdio run ./test/config/wdio.local.conf.js --suite exampleSuiteName
+```
+
 
 ---
 ## Config Files
