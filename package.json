@@ -6,8 +6,8 @@
   "author": "jason.hall@accenture.com",
   "license": "MIT",
   "scripts": {
-    "test-local": "npx wdio run ./test/config/wdio.local.conf.js",
-    "test-remote": "npx wdio run ./test/config/wdio.remote.conf.js",
+    "local": "npx wdio run ./test/config/wdio.local.conf.js",
+    "headless": "npx wdio run ./test/config/wdio.remote.conf.js",
     "build": "docker build -t mytest .",
     "docker": "docker run --rm -ti mytest yarn run test-remote",
     "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",

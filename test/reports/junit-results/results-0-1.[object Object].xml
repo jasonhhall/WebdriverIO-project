@@ -1,19 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="TEST SUITE 2 TEST CASES" timestamp="2021-09-16T22:36:25" time="0.166" tests="6" failures="0" errors="0" skipped="0">
+  <testsuite name="TEST LOGIN PAGE" timestamp="2021-09-16T23:02:04" time="9.86" tests="2" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="TEST SUITE 2 TEST CASES"/>
+      <property name="suiteName" value="TEST LOGIN PAGE"/>
       <property name="capabilities" value="chrome.93_0_4577_82.win32"/>
-      <property name="file" value=".\test\specs\mySuite2.js"/>
+      <property name="file" value=".\test\specs\login-spec.js"/>
     </properties>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should be able to read data from worksheet" time="0.08"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should be able to read multilpe sheets from workbook" time="0.025"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should be able to read sheets from multilpe workbooks" time="0.036"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should display error message when reading from blank sheet" time="0.001"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should display error message when reading from blank workbook" time="0.001"/>
-    <testcase classname="chrome.93_0_4577_82.win32.TEST_SUITE_2_TEST_CASES" name="should display error message when file not found" time="0">
+    <testcase classname="chrome.93_0_4577_82.win32.TEST_LOGIN_PAGE" name="should deny access with wrong creds" time="5.522">
       <system-out><![CDATA[
+COMMAND: navigateTo - {"url":"http://demowebshop.tricentis.com/login"}
+RESULT: undefined
+COMMAND: findElement - {"using":"css selector","value":"#Email"}
+RESULT: undefined
+COMMAND: elementClear - {"elementId":"ELEMENT-1"}
+RESULT: undefined
+COMMAND: elementSendKeys - {"elementId":"ELEMENT-1","text":"foo@test.com"}
+RESULT: undefined
+COMMAND: findElement - {"using":"css selector","value":"#Password"}
+RESULT: undefined
+COMMAND: elementClear - {"elementId":"ELEMENT-2"}
+RESULT: undefined
+COMMAND: elementSendKeys - {"elementId":"ELEMENT-2","text":"bar"}
+RESULT: undefined
+COMMAND: findElement - {"using":"css selector","value":".login-button"}
+RESULT: undefined
+COMMAND: elementClick - {"elementId":"ELEMENT-3"}
+RESULT: undefined
+COMMAND: findElement - {"using":"css selector","value":"div.message-error span"}
+RESULT: undefined
+COMMAND: getElementText - {"elementId":"ELEMENT-4"}
+RESULT: undefined
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.93_0_4577_82.win32.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="4.311">
+      <system-out><![CDATA[
+COMMAND: navigateTo - {"url":"http://demowebshop.tricentis.com/login"}
+RESULT: undefined
+COMMAND: findElement - {"using":"css selector","value":"#Email"}
+RESULT: undefined
+COMMAND: elementClear - {"elementId":"ELEMENT-5"}
+RESULT: undefined
+COMMAND: elementSendKeys - {"elementId":"ELEMENT-5","text":"hjtest@test.com"}
+RESULT: undefined
+COMMAND: findElement - {"using":"css selector","value":"#Password"}
+RESULT: undefined
+COMMAND: elementClear - {"elementId":"ELEMENT-6"}
+RESULT: undefined
+COMMAND: elementSendKeys - {"elementId":"ELEMENT-6","text":"123456"}
+RESULT: undefined
+COMMAND: findElement - {"using":"css selector","value":".login-button"}
+RESULT: undefined
+COMMAND: elementClick - {"elementId":"ELEMENT-7"}
+RESULT: undefined
+COMMAND: findElement - {"using":"css selector","value":"div.header-links ul li:nth-child(1) a"}
+RESULT: undefined
+COMMAND: getElementText - {"elementId":"ELEMENT-8"}
+RESULT: undefined
 COMMAND: deleteSession - {}
 RESULT: undefined
 ]]></system-out>

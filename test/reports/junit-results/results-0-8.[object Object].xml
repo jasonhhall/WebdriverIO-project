@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="TEST READ DATA FROM EXCEL SHEET" timestamp="2021-09-15T21:24:44" time="0.238" tests="6" failures="0" errors="0" skipped="0">
+  <testsuite name="TEST READ DATA FROM EXCEL SHEET" timestamp="2021-09-16T23:02:24" time="0.408" tests="6" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="TEST READ DATA FROM EXCEL SHEET"/>
-      <property name="capabilities" value="chromeheadless.93_0_4577_82.win32"/>
+      <property name="capabilities" value="chrome.93_0_4577_82.win32"/>
       <property name="file" value=".\test\specs\read-excel-spec.js"/>
     </properties>
-    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should be able to read data from worksheet" time="0.137"/>
-    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should be able to read multilpe sheets from workbook" time="0.033"/>
-    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should be able to read sheets from multilpe workbooks" time="0.045"/>
-    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should display error message when reading from blank sheet" time="0"/>
-    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should display error message when reading from blank workbook" time="0"/>
-    <testcase classname="chromeheadless.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should display error message when file not found" time="0.001">
+    <testcase classname="chrome.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should be able to read data from worksheet" time="0.212"/>
+    <testcase classname="chrome.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should be able to read multilpe sheets from workbook" time="0.069"/>
+    <testcase classname="chrome.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should be able to read sheets from multilpe workbooks" time="0.07"/>
+    <testcase classname="chrome.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should display error message when reading from blank sheet" time="0.001"/>
+    <testcase classname="chrome.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should display error message when reading from blank workbook" time="0.003"/>
+    <testcase classname="chrome.93_0_4577_82.win32.TEST_READ_DATA_FROM_EXCEL_SHEET" name="should display error message when file not found" time="0.005">
       <system-out><![CDATA[
 COMMAND: deleteSession - {}
 RESULT: undefined
