@@ -69,6 +69,7 @@ WebdriverIO uses several different types of test reporters to communicate pass/f
 The Allure Reporter creates [Allure](http://allure.qatools.ru/) test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots. Add allure to the reporters array in config file and define the output directory of the allure reports.  Please note, this has been added in .config.
 
 To generate and view an allure report locally, run
+  
 
 ```
  npm run allure-report
