@@ -3,10 +3,10 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: ianwalter/puppeteer:latest
+      - image: twitchautomation/salesforce-cx-repo:latest
     steps:
       - checkout
-
+          
       - run:
           name: install packages
           command: npm install
