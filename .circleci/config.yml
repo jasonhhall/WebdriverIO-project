@@ -6,24 +6,6 @@ jobs:
       - image: twitchautomation/salesforce-cx-repo:latest
     steps:
       - checkout
-      - run: apt-get update && apt-get install -y \software-properties-common
-
-      # Add the "JAVA" ppa
-      - run: RUN add-apt-repository -y \ppa:webupd8team/java
-
-      # Install OpenJDK-8
-      - run: apt-get update && \
-          apt-get install -y openjdk-8-jdk && \
-          apt-get install -y ant && \
-          apt-get clean;
-
-      - run: apt-get update && \
-          apt-get install ca-certificates-java && \
-          apt-get clean && \update-ca-certificates -f;
-
-      # Setup JAVA_HOME -- useful for docker commandline
-      ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-      - run:  export JAVA_HOME
       - run:
           name: install packages
           command: npm install
