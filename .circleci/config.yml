@@ -6,6 +6,9 @@ jobs:
       - image: twitchautomation/salesforce-cx-repo:latest
     steps:
       - checkout
+      - run: 
+          command: ENV JAVA_HOME=/usr/bin/java
+              RUN export JAVA_HOME
       - run:
           name: install packages
           command: npm install
