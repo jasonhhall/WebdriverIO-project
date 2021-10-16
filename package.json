@@ -8,10 +8,10 @@
   "scripts": {
     "local": "npx wdio run ./test/config/wdio.local.conf.js",
     "test-remote": "npx wdio run ./test/config/wdio.remote.conf.js",
-    "build": "docker build -t mytest .",
-    "docker": "docker run --rm -ti mytest yarn run test-remote",
+    "build": "docker build -t demotest .",
+    "docker": "docker run --rm -ti demotest yarn run test-remote",
     "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",
-    "allure-report": "allure generate allure-results --clean && allure serve"
+    "report": "allure generate allure-results --clean && allure serve"
   },
   "dependencies": {
     "chai": "^4.3.4"

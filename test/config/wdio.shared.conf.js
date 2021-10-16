@@ -112,9 +112,9 @@ exports.config = {
       'spec',
 
       ['allure', {
-          outputDir: './test/reports/allure-results',
-          disableWebdriverStepsReporting: true,
-          disableWebdriverScreenshotsReporting: true,
+          outputDir: 'allure-results',
+          disableWebdriverStepsReporting: false,
+          disableWebdriverScreenshotsReporting: false,
       }] ,
 
       // ['json', {
