@@ -12,5 +12,5 @@ RUN apt-get update && \
     apt-get install -y curl \
     wget \
     openjdk-8-jdk
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+ENV JAVA_HOME=/usr/bin/java
 RUN export JAVA_HOME
