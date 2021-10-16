@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: /twitchautomation/salesforce-cx-repo:latest
+      - image: twitchautomation/salesforce-cx-repo:latest
     steps:
       - checkout
           
