@@ -1,9 +1,18 @@
+const DeltaReporter = require('@delta-reporter/wdio-delta-reporter-service/lib/src/reporter');
+const DeltaService = require("@delta-reporter/wdio-delta-reporter-service");
+
+let delta_config = {
+  enabled: true,
+  host: 'delta_host',
+  project: 'Project Name',
+  testType: 'Test Type'
+};
+
 exports.config = {
     //
     // ====================
     // Runner Configuration
     // ====================
-    //
     //
     // ==================
     // Specify Test Files
@@ -52,7 +61,7 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-    
+
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
@@ -124,8 +133,8 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-   
-    
+
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -133,7 +142,7 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-  
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -151,6 +160,7 @@ exports.config = {
             //   outputDir: './test/reports/json-results'
             //   }],
 
+            'dot',
             ['junit', {
                 outputDir: './test/reports/junit-results',
                 outputFileFormat: function (options) {
@@ -159,9 +169,10 @@ exports.config = {
             }],
 
         ],
-        services: [new DeltaService(delta_config)],
 
-    
+        services: [],
+
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -294,9 +305,9 @@ exports.config = {
      */
     //  onComplete: function() {
     // },
-    
+
     afterStep: function (test, scenario, { error, duration, passed }) {
-      },
+    },
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session

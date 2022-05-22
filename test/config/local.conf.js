@@ -3,7 +3,10 @@ exports.config = {
     // ====================
     // Runner Configuration
     // ====================
-    //
+    runner: 'local',
+    hostname: 'localhost',
+    port: 4444,
+    path: '/',
     //
     // ==================
     // Specify Test Files
@@ -51,31 +54,24 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
-    
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'chrome',
-        'goog:chromeOptions':
+    maxInstances: 5,
+    capabilities: [
         {
-            args:
-                [
-                    'disable-infobars',
-                    'disable-popup-blocking',
-                    'disable-notifications',
-                    '--start-maximized',
-                    '--start-fullscreen'
-                ],
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+                args: ['--no-sandbox',
+                      '--headless',
+                    '--disable-infobars',
+                    '--disable-gpu',]
+            }
         },
-        acceptInsecureCerts: true
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+         {
+            browserName: 'firefox',
+         'moz:firefoxOptions': {
+           args: ['-headless']
+          }
+        },
+    ],
     //
     // ===================
     // Test Configurations
@@ -159,7 +155,6 @@ exports.config = {
             }],
 
         ],
-        services: [new DeltaService(delta_config)],
 
     
     //
