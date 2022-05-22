@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="TEST LOGIN PAGE" timestamp="2021-10-15T19:51:01" time="6.81" tests="2" failures="0" errors="0" skipped="0">
+  <testsuite name="TEST LOGIN PAGE" timestamp="2022-05-20T02:28:55" time="7.476" tests="2" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="TEST LOGIN PAGE"/>
-      <property name="capabilities" value="chrome.94_0_4606_81.win32"/>
-      <property name="file" value=".\test\specs\login-spec.js"/>
+      <property name="capabilities" value="chromeheadless.101_0_4951_64.darwin"/>
+      <property name="file" value="./test/specs/login-spec.js"/>
     </properties>
-    <testcase classname="chrome.94_0_4606_81.win32.TEST_LOGIN_PAGE" name="should deny access with wrong creds" time="3.413">
+    <testcase classname="chromeheadless.101_0_4951_64.darwin.TEST_LOGIN_PAGE" name="should deny access with wrong creds" time="2.508">
       <system-out><![CDATA[
 COMMAND: navigateTo - {"url":"http://demowebshop.tricentis.com/login"}
 RESULT: undefined
@@ -33,7 +33,7 @@ COMMAND: getElementText - {"elementId":"ELEMENT-4"}
 RESULT: undefined
 ]]></system-out>
     </testcase>
-    <testcase classname="chrome.94_0_4606_81.win32.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="3.359">
+    <testcase classname="chromeheadless.101_0_4951_64.darwin.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="4.967">
       <system-out><![CDATA[
 COMMAND: navigateTo - {"url":"http://demowebshop.tricentis.com/login"}
 RESULT: undefined

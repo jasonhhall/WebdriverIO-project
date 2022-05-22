@@ -1,4 +1,4 @@
-const allure = require('allure-commandline')
+
 const path = require('path')
 
 const { config } = require('./wdio.shared.conf')
