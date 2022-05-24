@@ -114,5 +114,7 @@ dist
 # Local History for Visual Studio Code
 .history/
 
-allure-results/
-allure-report/
+allure-results
+allure-report
+junit-results
+wdio-logs
