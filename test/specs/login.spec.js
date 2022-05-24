@@ -11,8 +11,8 @@ describe('TEST LOGIN PAGE', () => {
             await LoginPage.setEmailAddress(process.env.EMAIL);
             await LoginPage.setPassword(process.env.PASSWORD);
             await LoginPage.clickLogin();
-            const customerEmail = await $("[href='/customer/info']");
+            const customerEmail = await $("div .header-links [href='/customer/info']");
             await expect(customerEmail).toHaveText(process.env.EMAIL);
-            await MainPage.clickLogoutLink();
+            await LoginPage.clickLogoutLink();
         })
 })
