@@ -4,4 +4,4 @@ ADD . /app
 
 RUN npm install
 
-CMD npm run chrome
+CMD npm run remote
