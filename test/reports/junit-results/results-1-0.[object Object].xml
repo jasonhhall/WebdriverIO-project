@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="TEST LOGIN PAGE" timestamp="2022-07-10T22:21:03" time="6.64" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="TEST LOGIN PAGE"/>
+      <property name="capabilities" value="firefox.100_0_2.mac"/>
+      <property name="file" value="./test/specs/login.spec.js"/>
+    </properties>
+    <testcase classname="firefox.100_0_2.mac.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="6.635">
+      <system-out><![CDATA[
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element - {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/url - {"url":"http://demowebshop.tricentis.com/login"}
+RESULT: {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/elements - {"using":"css selector","value":"#Email"}
+RESULT: {"url":"http://demowebshop.tricentis.com/login"}
+RESULT: {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element - {"using":"css selector","value":"#Email"}
+RESULT: {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element/3f41ce4e-7a71-4c05-b4b9-6af805177e0e/clear - {}
+RESULT: {}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element/3f41ce4e-7a71-4c05-b4b9-6af805177e0e/value - {"text":"jason.hall@test123.com"}
+RESULT: {"text":"jason.hall@test123.com"}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element - {"using":"css selector","value":"#Password"}
+RESULT: {"using":"css selector","value":"#Password"}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element/0cc5228f-24cf-42a7-96c1-22856f95958d/clear - {}
+RESULT: {}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element/0cc5228f-24cf-42a7-96c1-22856f95958d/value - {"text":"123456"}
+RESULT: {"text":"123456"}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element - {"using":"xpath","value":"//input[contains(@class,'login-button')]"}
+RESULT: {"using":"xpath","value":"//input[contains(@class,'login-button')]"}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element/7f29e0a8-3a87-4ea9-afa7-e724a3c9e1c9/click - {}
+RESULT: {}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element - {"using":"css selector","value":"div .header-links [href='/customer/info']"}
+RESULT: {"using":"css selector","value":"div .header-links [href='/customer/info']"}
+COMMAND: GET /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element/22686902-1a20-493b-9a6f-e702584c5466/text - {}
+RESULT: {}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element - {"using":"css selector","value":"div.header-links a[href='/logout']"}
+RESULT: {"using":"css selector","value":"div.header-links a[href='/logout']"}
+COMMAND: POST /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e/element/ec744c83-38f8-43ba-abc8-a41cead2ed9a/click - {}
+RESULT: {}
+COMMAND: DELETE /session/7b0773fa-d5b7-485c-a0cf-3c4dba80552e - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
