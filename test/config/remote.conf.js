@@ -5,9 +5,9 @@ exports.config = {
     // Runner Configuration
     // ====================
     runner: 'local',
-    // hostname: 'localhost',
-    // port: 4444,
-    // path: '/',
+    hostname: 'localhost',
+    port: 4444,
+    path: '/',
     //
     // ==================
     // Specify Test Files
@@ -61,17 +61,17 @@ exports.config = {
             browserName: 'chrome',
             'goog:chromeOptions': {
                 args: ['--no-sandbox',
-                    //   '--headless',
+                       '--headless',
                     '--disable-infobars',
                     '--disable-gpu',]
             }
         },
-        //  {
-        //     browserName: 'firefox',
-        //  'moz:firefoxOptions': {
-        //    args: ['-headless']
-        //   }
-        // },
+         {
+            browserName: 'firefox',
+         'moz:firefoxOptions': {
+           args: ['-headless']
+          }
+        },
     ],
     //
     // ===================
