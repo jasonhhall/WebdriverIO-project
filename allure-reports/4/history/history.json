@@ -1,0 +1,31 @@
+{
+  "892e0a2b8c82ff6744646ce02ccae7e8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    },
+    "items" : [ {
+      "uid" : "62f5a692a8955efe",
+      "reportUrl" : "../4/index.html#testresult/62f5a692a8955efe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1657605939991,
+        "stop" : 1657605944618,
+        "duration" : 4627
+      }
+    }, {
+      "uid" : "245e8338dc1fa224",
+      "reportUrl" : "../3/index.html#testresult/245e8338dc1fa224",
+      "status" : "passed",
+      "time" : {
+        "start" : 1657605939991,
+        "stop" : 1657605944618,
+        "duration" : 4627
+      }
+    } ]
+  }
+}

@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jul 12 06:05:39 UTC 2022","Tue Jul 12 06:05:44 UTC 2022","4627","","TEST LOGIN PAGE","","TEST LOGIN PAGE","should allow access with correct creds","should allow access with correct creds",""

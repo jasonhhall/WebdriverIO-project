@@ -4,7 +4,7 @@ const path = require('path');
 
 
 const drivers = {
-    chrome: { version: '101.0.4951.41' }, // https://chromedriver.chromium.org/
+    chrome: { version: '103.0.5060.53' }, // https://chromedriver.chromium.org/
     firefox: { version: '0.30.0' } // https://github.com/mozilla/geckodriver/releases
     // chromiumedge: { version: '85.0.564.70' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
 };
@@ -171,7 +171,7 @@ exports.config =
             //   outputDir: './test/reports/json-results'
             //   }],
             ['allure', {
-                outputDir: './test/reports/allure-results',
+                outputDir: 'allure-results',
                 disableWebdriverStepsReporting: true,
                 disableWebdriverScreenshotsReporting: true,
                 addConsoleLogs: true,

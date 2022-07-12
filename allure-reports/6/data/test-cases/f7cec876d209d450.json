@@ -1,0 +1,133 @@
+{
+  "uid" : "f7cec876d209d450",
+  "name" : "should allow access with correct creds",
+  "fullName" : "TEST LOGIN PAGE.should allow access with correct creds",
+  "historyId" : "892e0a2b8c82ff6744646ce02ccae7e8",
+  "time" : {
+    "start" : 1657606236690,
+    "stop" : 1657606241024,
+    "duration" : 4334
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open Login",
+      "time" : {
+        "start" : 1657606236691,
+        "stop" : 1657606236691,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "1-0"
+  }, {
+    "name" : "suite",
+    "value" : "TEST LOGIN PAGE"
+  }, {
+    "name" : "testClass",
+    "value" : "TEST LOGIN PAGE"
+  }, {
+    "name" : "testMethod",
+    "value" : "should allow access with correct creds"
+  }, {
+    "name" : "package",
+    "value" : "TEST LOGIN PAGE"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "firefox-100.0.2"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f30514dddb48fd9e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1657605939991,
+        "stop" : 1657605944618,
+        "duration" : 4627
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "8ac2b58ed437859d",
+        "reportUrl" : "../5/index.html#testresult/8ac2b58ed437859d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1657606236690,
+          "stop" : 1657606241024,
+          "duration" : 4334
+        }
+      }, {
+        "uid" : "62f5a692a8955efe",
+        "reportUrl" : "../4/index.html#testresult/62f5a692a8955efe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1657605939991,
+          "stop" : 1657605944618,
+          "duration" : 4627
+        }
+      }, {
+        "uid" : "245e8338dc1fa224",
+        "reportUrl" : "../3/index.html#testresult/245e8338dc1fa224",
+        "status" : "passed",
+        "time" : {
+          "start" : 1657605939991,
+          "stop" : 1657605944618,
+          "duration" : 4627
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f7cec876d209d450.json",
+  "parameterValues" : [ "firefox-100.0.2" ]
+}

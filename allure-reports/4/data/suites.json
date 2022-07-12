@@ -1,0 +1,26 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "TEST LOGIN PAGE",
+    "children" : [ {
+      "name" : "should allow access with correct creds",
+      "uid" : "62f5a692a8955efe",
+      "parentUid" : "de60295edfbb522a19d3b2bf6afdad87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1657605939991,
+        "stop" : 1657605944618,
+        "duration" : 4627
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "firefox-100.0.2" ]
+    } ],
+    "uid" : "de60295edfbb522a19d3b2bf6afdad87"
+  } ]
+}

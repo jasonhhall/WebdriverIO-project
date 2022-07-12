@@ -1,0 +1,11 @@
+[ {
+  "uid" : "62f5a692a8955efe",
+  "name" : "should allow access with correct creds",
+  "time" : {
+    "start" : 1657605939991,
+    "stop" : 1657605944618,
+    "duration" : 4627
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

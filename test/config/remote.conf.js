@@ -5,9 +5,9 @@ exports.config = {
     // Runner Configuration
     // ====================
     runner: 'local',
-    hostname: 'localhost',
-    port: 4444,
-    path: '/',
+    // hostname: 'localhost',
+    // port: 4444,
+    // path: '/',
     //
     // ==================
     // Specify Test Files
@@ -66,12 +66,12 @@ exports.config = {
                     '--disable-gpu',]
             }
         },
-         {
-            browserName: 'firefox',
-         'moz:firefoxOptions': {
-           args: ['-headless']
-          }
-        },
+        //  {
+        //     browserName: 'firefox',
+        //  'moz:firefoxOptions': {
+        //    args: ['-headless']
+        //   }
+        // },
     ],
     //
     // ===================
@@ -148,7 +148,7 @@ exports.config = {
             //   outputDir: './test/reports/json-results'
            //   }],
             ['allure', {
-                outputDir: './test/reports/allure-results',
+                outputDir: 'allure-results',
                 disableWebdriverStepsReporting: true,
                 disableWebdriverScreenshotsReporting: true,
                 addConsoleLogs: true,

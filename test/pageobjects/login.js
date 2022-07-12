@@ -1,5 +1,6 @@
 const Page = require('./page');
-import allureReporter from '@wdio/allure-reporter'
+import allureReporter from '@wdio/allure-reporter';
+import { allure } from 'allure-mocha/runtime';
 
 class LoginPage extends Page {
 
@@ -8,9 +9,10 @@ class LoginPage extends Page {
     get loginBtn() { return $("//input[contains(@class,'login-button')]") }
 
     async open() {
-        allureReporter.startStep('Open Login');
+        
+         allureReporter.startStep('Open Login');
         super.open('login');
-        allureReporter.endStep("passed");
+         allureReporter.endStep("passed");
        
         
     };

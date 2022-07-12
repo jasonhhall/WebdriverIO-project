@@ -1,7 +1,6 @@
-FROM ianwalter/puppeteer:latest
+FROM huli/webdriverio
+
 WORKDIR /app
 ADD . /app
 
 RUN npm install
-
-CMD npm run chrome

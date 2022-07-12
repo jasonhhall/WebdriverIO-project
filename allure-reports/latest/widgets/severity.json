@@ -1,0 +1,21 @@
+[ {
+  "uid" : "c0bdc4b1528f71fe",
+  "name" : "should allow access with correct creds",
+  "time" : {
+    "start" : 1657606412772,
+    "stop" : 1657606417352,
+    "duration" : 4580
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "890fd02a2c8e3ff0",
+  "name" : "should allow access with correct creds",
+  "time" : {
+    "start" : 1657613896300,
+    "stop" : 1657613908546,
+    "duration" : 12246
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
