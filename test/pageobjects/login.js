@@ -1,5 +1,5 @@
 const Page = require('./page');
-import allureReporter from '@wdio/allure-reporter'
+
 
 class LoginPage extends Page {
 
@@ -8,9 +8,9 @@ class LoginPage extends Page {
     get loginBtn() { return $("//input[contains(@class,'login-button')]") }
 
     async open() {
-        allureReporter.startStep('Open Login');
+      
         super.open('login');
-        allureReporter.endStep("passed");
+      
        
         
     };

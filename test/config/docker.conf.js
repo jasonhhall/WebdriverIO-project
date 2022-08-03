@@ -64,7 +64,7 @@ exports.config = {
             args: [
                 '--no-sandbox',
                 '--disable-infobars',
-                '--headless',
+                 '--headless',
                 '--disable-gpu',
                 '--window-size=1440,735'
             ],
@@ -147,14 +147,23 @@ exports.config = {
         [
             'spec',
             ['junit', {
-                outputDir: './test/reports/junit-results',
+                outputDir: './junit-results',
                 outputFileFormat: function (options) {
                     return `results-${options.cid}.${options.capabilities}.xml`
                 }
             }],
 
         ],
-    services: [],
+        services: ['docker'],
+        dockerOptions: {
+            image: 'selenium/standalone-chrome',
+            healthCheck: {
+                url: 'http://localhost:4444',
+                maxRetries: 3,
+                inspectInterval: 1000,
+                startDelay: 2000
+            }
+        },
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

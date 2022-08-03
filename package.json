@@ -5,11 +5,8 @@
     "main": "./node_modules/.bin/wdio",
     "scripts": {
         "chrome": "npx wdio run ./test/config/chrome.conf.js",
-<<<<<<< HEAD
-        "remote": "npx wdio run ./test/config/docker.conf.js",
-=======
         "remote": "npx wdio run ./test/config/remote.conf.js",
->>>>>>> 924328f35907d13228044fcaf0c0723ce568dd10
+        "local": "npx wdio run ./test/config/docker.conf.js",
         "spec": "npx wdio run ./test/config/wdio.local.conf.js --spec",
         "suite": "npx wdio run ./test/config/wdio.local.conf.js --suite",
         "selenium": "npx wdio run ./test/config/selenium-standalone.conf.js",
@@ -19,7 +16,7 @@
         "docker:selenium-standalone": "docker run -it -p 4444:4444 webdriverio/selenium-standalone",
         "selenium:server": "npx selenium-standalone install && npx selenium-standalone start",
         "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",
-    "allure-report": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open"
+        "allure-report": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open"
     },
     "devDependencies": {
         "@babel/cli": "^7.17.10",
@@ -39,6 +36,7 @@
         "dotenv": "^16.0.1",
         "junit-viewer": "^4.11.1",
         "wdio-chromedriver-service": "^7.3.2",
+        "wdio-docker-service": "^3.2.1",
         "wdio-json-reporter": "^3.0.0"
     },
     "dependencies": {
