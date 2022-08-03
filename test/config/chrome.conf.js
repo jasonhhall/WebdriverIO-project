@@ -148,7 +148,7 @@ exports.config = {
         [
             'spec',
             ['junit', {
-                outputDir: './test/reports/junit-results',
+                outputDir: './wdio-reports/junit-results',
                 outputFileFormat: function (options) {
                     return `results-${options.cid}.${options.capabilities}.xml`
                 }

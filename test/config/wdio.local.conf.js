@@ -152,7 +152,7 @@ exports.config = {
             //   }],
 
             ['junit', {
-                outputDir: './test/reports/junit-results',
+                outputDir: './reports/junit-results',
                 outputFileFormat: function (options) {
                     return `results-${options.cid}.${options.capabilities}.xml`
                 }

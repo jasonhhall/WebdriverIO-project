@@ -118,3 +118,4 @@ allure-results
 allure-report
 junit-results
 wdio-logs
+wdio-reports
