@@ -146,6 +146,8 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters:
         [
+            'dot',
+            ['mochawesome', { stdout: true }],
             'spec',
             ['junit', {
                 outputDir: './wdio-reports/junit-results',
