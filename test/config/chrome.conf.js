@@ -147,8 +147,12 @@ exports.config = {
     reporters:
         [
             'dot',
-            ['mochawesome', { stdout: true }],
-            'spec',
+            ['mochawesome', {
+                outputDir: './Results',
+                outputFileFormat: function (opts) {
+                    return `results-mocha-awesome.json`
+                }
+            }],
             ['junit', {
                 outputDir: './wdio-reports/junit-results',
                 outputFileFormat: function (options) {
@@ -290,6 +294,10 @@ exports.config = {
      */
     //  onComplete: function() {
     // },
+    onComplete: function (exitCode, config, capabilities, results) {
+        const mergeResults = require('wdio-mochawesome-reporter/mergeResults')
+        mergeResults('./Results', "results-*")
+    },
 
     afterStep: function (test, scenario, { error, duration, passed }) {
     },

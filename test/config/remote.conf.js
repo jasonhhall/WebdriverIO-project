@@ -1,4 +1,3 @@
-const allure = require('allure-commandline')
 exports.config = {
     //
     // ====================
@@ -49,13 +48,13 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 16,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    maxInstances: 5,
+    maxInstances: 16,
     capabilities: [
         {
             browserName: 'chrome',
@@ -143,18 +142,11 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters:
         [
+            'dot',
+            ['mochawesome', { stdout: true }],
             'spec',
-            // ['json', {
-            //   outputDir: './test/reports/json-results'
-           //   }],
-            ['allure', {
-                outputDir: './test/reports/allure-results',
-                disableWebdriverStepsReporting: true,
-                disableWebdriverScreenshotsReporting: true,
-                addConsoleLogs: true,
-            }],
             ['junit', {
-                outputDir: './test/reports/junit-results',
+                outputDir: './wdio-reports/junit-results',
                 outputFileFormat: function (options) {
                     return `results-${options.cid}.${options.capabilities}.xml`
                 }
