@@ -1,34 +1,59 @@
-exports.config = {
+const allure = require('allure-commandline')
+require('dotenv').config();
+const path = require('path');
+
+
+const drivers = {
+    chrome: { version: '101.0.4951.41' }, // https://chromedriver.chromium.org/
+    firefox: { version: '0.30.0' } // https://github.com/mozilla/geckodriver/releases
+    // chromiumedge: { version: '85.0.564.70' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+};
+const CURRENT_DATE = new Date();
+const DATE = CURRENT_DATE.toISOString().split('T')[0].trim();
+
+exports.config =
+{
     //
     // ====================
     // Runner Configuration
     // ====================
     //
-    //
+    // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
+    // on a remote machine).
+    runner: 'local',
+    hostname: 'localhost',
+    port: 4444,
+    path: '/',
+    // user: 'enterprise-plat-tech',
+    // key: 'GvPDXWZRdHhMdizQ3tfg',
+    // services: [
+    //     ['crossbrowsertesting', {
+    //         cbtTunnel: true,
+    //         cbtTunnelOpts: {
+    //             // any additional options from cbt_tunnels
+    //         },
+    //     }],
+    //   ],
+
+
     // ==================
     // Specify Test Files
     // ==================
     // Define which test specs should run. The pattern is relative to the directory
-    // from which `wdio` was called.
+    // from which `wdio` was called. Notice that, if you are calling `wdio` from an
+    // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
+    // directory is where your package.json resides, so `wdio` will be called from there.
     //
-    // The specs are defined as an array of spec files (optionally using wildcards
-    // that will be expanded). The test for each spec file will be run in a separate
-    // worker process. In order to have a group of spec files run in the same worker
-    // process simply enclose them in an array within the specs array.
-    //
-    // If you are calling `wdio` from an NPM script (see https://docs.npmjs.com/cli/run-script),
-    // then the current working directory is where your `package.json` resides, so `wdio`
-    // will be called from there.
-    //
-    specs: [
-        './test/specs/**/*.js'
-    ],
-    // define specific suites
-    suites: [],
+    specs:
+        [
+            './test/specs/**/**/*.js'
+        ],
     // Patterns to exclude.
-    exclude: [
-        // 'path/to/excluded/files'
-    ],
+    exclude:
+        [
+
+        ],
+
     //
     // ============
     // Capabilities
@@ -44,38 +69,33 @@ exports.config = {
     // files and you set maxInstances to 10, all spec files will get tested at the same time
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
-    //
-    maxInstances: 10,
-    //
-    // If you have trouble getting all important capabilities together, check out the
-    // Sauce Labs platform configurator - a great tool to configure your capabilities:
-    // https://docs.saucelabs.com/reference/platforms-configurator
-    //
-    capabilities: [{
-    
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'chrome',
-        'goog:chromeOptions':
+    maxInstances: 5,
+    capabilities: [
         {
-            args:
-                [
-                    'disable-infobars',
-                    'disable-popup-blocking',
-                    'disable-notifications',
-                    '--start-maximized',
-                    '--start-fullscreen'
-                ],
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+                args: ['--no-sandbox',
+                     '--headless',
+                    '--disable-infobars',
+                    '--disable-gpu',]
+            }
         },
-        acceptInsecureCerts: true
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+         {
+            browserName: 'firefox',
+         'moz:firefoxOptions': {
+              args: ['-headless']
+          }
+        },
+    ],
+    services: [
+        ['selenium-standalone', {
+            logPath: 'wdio-logs',
+            installArgs: { drivers }, // drivers to install
+            args: { drivers } // drivers to use
+        }]
+    ],
+
+
     //
     // ===================
     // Test Configurations
@@ -83,21 +103,21 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'trace',
+    logLevel: 'debug',
     outputDir: 'wdio-logs',
     //
     // Set specific log levels per logger
     // loggers:
     // - webdriver, webdriverio
-    // - @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
+    // - @wdio/applitools-service, @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
     // - @wdio/mocha-framework, @wdio/jasmine-framework
-    // - @wdio/local-runner
+    // - @wdio/local-runner, @wdio/lambda-runner
     // - @wdio/sumologic-reporter
-    // - @wdio/cli, @wdio/config, @wdio/utils
+    // - @wdio/cli, @wdio/config, @wdio/sync, @wdio/utils
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     // logLevels: {
     //     webdriver: 'info',
-    //     '@wdio/appium-service': 'info'
+    //     '@wdio/applitools-service': 'info'
     // },
     //
     // If you only want to run your tests until a specific amount of tests have failed use
@@ -111,29 +131,28 @@ exports.config = {
     baseUrl: 'http://demowebshop.tricentis.com/',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 50000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
-    connectionRetryTimeout: 120000,
+    connectionRetryTimeout: 100000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount: 5,
     //
-    // Test runner services
-    // Services take over a specific job you don't want to take care of. They enhance
-    // your test setup with almost no effort. Unlike plugins, they don't add new
-    // commands. Instead, they hook themselves up into the test process.
-   
-    
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
-    // see also: https://webdriver.io/docs/frameworks
+    // see also: https://webdriver.io/docs/frameworks.html
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-  
+    mochaOpts:
+    {
+        ui: 'bdd',
+        timeout: process.env.DEBUG === 'true' ? 9999999 : 1200000,
+        compilers: ['js:@babel/register'],
+    },
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -147,9 +166,16 @@ exports.config = {
     reporters:
         [
             'spec',
+
             // ['json', {
             //   outputDir: './test/reports/json-results'
             //   }],
+            ['allure', {
+                outputDir: './test/reports/allure-results',
+                disableWebdriverStepsReporting: true,
+                disableWebdriverScreenshotsReporting: true,
+                addConsoleLogs: true,
+            }],
 
             ['junit', {
                 outputDir: './test/reports/junit-results',
@@ -159,18 +185,8 @@ exports.config = {
             }],
 
         ],
-        services: [new DeltaService(delta_config)],
 
-    
-    //
-    // Options to be passed to Mocha.
-    // See the full list at http://mochajs.org/
-    mochaOpts:
-    {
-        ui: 'bdd',
-        timeout: process.env.DEBUG === 'true' ? 9999999 : 1200000,
-        compilers: ['js:@babel/register'],
-    },
+
     //
     // =====
     // Hooks
@@ -184,8 +200,10 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    //  onPrepare: function (config, capabilities)
+    //  {
+
+    //  },
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
@@ -210,12 +228,17 @@ exports.config = {
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
      * @param {Array.<Object>} capabilities list of capabilities details
-     * @param {Array.<String>} specs        List of spec file paths that are to be run
-     * @param {Object}         browser      instance of created browser/device session
+     * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
-    /**
+    before: function () {
+        browser.addCommand('highlightWebElement',
+            function (webElement) {
+                browser.execute('arguments[0].style.backgroundColor = "#FDFF47";', webElement);
+                browser.execute('arguments[0].style.outline = "#f00 solid 2px";', webElement);
+            }
+        );
+    },
+    /*
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
      * @param {Array} args arguments that command would receive
@@ -248,15 +271,17 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    //  afterTest: function(test, context, { error, result, duration, passed, retries })
+    //  {
 
 
+    //  },
     /**
      * Hook that gets executed after the suite has ended
      * @param {Object} suite suite details
      */
-    // afterSuite: function (suite) {
+    // afterSuite: function (suite)
+    // {
     // },
     /**
      * Runs after a WebdriverIO command gets executed
@@ -292,11 +317,26 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    //  onComplete: function() {
-    // },
-    
-    afterStep: function (test, scenario, { error, duration, passed }) {
-      },
+     onComplete: function() {
+        const reportError = new Error('Could not generate Allure report')
+        const generation = allure(['generate', 'allure-results', '--clean'])
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(
+                () => reject(reportError),
+                5000)
+
+            generation.on('exit', function(exitCode) {
+                clearTimeout(generationTimeout)
+
+                if (exitCode !== 0) {
+                    return reject(reportError)
+                }
+
+                console.log('Allure report successfully generated')
+                resolve()
+            })
+        })
+    },
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session
