@@ -5,18 +5,20 @@
     "main": "./node_modules/.bin/wdio",
     "scripts": {
         "chrome": "npx wdio run ./test/config/chrome.conf.js",
-        "remote": "npx wdio run ./test/config/docker.conf.js",
-        "test": "npx wdio run ./test/config/remote.conf.js",
+        "docker": "npx wdio run ./test/config/docker.conf.js",
+        "remote": "npx wdio run ./test/config/remote.conf.js",
         "spec": "npx wdio run ./test/config/wdio.local.conf.js --spec",
         "suite": "npx wdio run ./test/config/wdio.local.conf.js --suite",
         "selenium": "npx wdio run ./test/config/selenium-standalone.conf.js",
         "build": "docker build -t webshopdemo -f Dockerfile .",
         "docker:run": "docker run -it webshopdemo",
-        "docker:up": "docker-compose up",
+        "docker:allure": "docker-compose up -d allure allure-ui",
+        "docker:selenium":"docker-compose up -d chrome firefox selenium-hub",
         "docker:selenium-standalone": "docker run -it -p 4444:4444 webdriverio/selenium-standalone",
         "selenium:server": "npx selenium-standalone install && npx selenium-standalone start",
-        "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",
-        "allure-report": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open"
+        "allure:history": "mkdir -p allure-report/history ./allure-results/history && cp -a allure-report/history ./allure-results/",
+        "allure": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open",
+        "junit-report": "node_modules/.bin/junit-viewer --results=./test/reports/junit-results --save=junit-results.html && open junit-results.html"
     },
     "devDependencies": {
         "@babel/cli": "^7.17.10",

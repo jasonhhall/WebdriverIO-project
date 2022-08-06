@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="TEST LOGIN PAGE" timestamp="2022-07-10T22:31:29" time="5.572" tests="1" failures="0" errors="0" skipped="0">
+  <testsuite name="TEST LOGIN PAGE" timestamp="2022-08-06T01:18:01" time="4.964" tests="1" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="TEST LOGIN PAGE"/>
       <property name="capabilities" value="firefox.100_0_2.mac"/>
       <property name="file" value="./test/specs/login.spec.js"/>
     </properties>
-    <testcase classname="firefox.100_0_2.mac.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="5.566">
+    <testcase classname="firefox.100_0_2.mac.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="4.958">
       <system-out><![CDATA[
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element - {"using":"css selector","value":"#Email"}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/url - {"url":"http://demowebshop.tricentis.com/login"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element - {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/url - {"url":"http://demowebshop.tricentis.com/login"}
 RESULT: {"using":"css selector","value":"#Email"}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/elements - {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/elements - {"using":"css selector","value":"#Email"}
 RESULT: {"url":"http://demowebshop.tricentis.com/login"}
 RESULT: {"using":"css selector","value":"#Email"}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element - {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element - {"using":"css selector","value":"#Email"}
 RESULT: {"using":"css selector","value":"#Email"}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element/b7ee12e0-bb2b-4121-99b6-4407fd4e466c/clear - {}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element/55b8ccd2-12d6-4016-b893-2690475f2858/clear - {}
 RESULT: {}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element/b7ee12e0-bb2b-4121-99b6-4407fd4e466c/value - {"text":"jason.hall@test123.com"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element/55b8ccd2-12d6-4016-b893-2690475f2858/value - {"text":"jason.hall@test123.com"}
 RESULT: {"text":"jason.hall@test123.com"}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element - {"using":"css selector","value":"#Password"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element - {"using":"css selector","value":"#Password"}
 RESULT: {"using":"css selector","value":"#Password"}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element/810c1380-580f-45a8-b4f9-41efc556a935/clear - {}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element/aa5cf62a-42fb-475f-ae2f-3d26cebb28f6/clear - {}
 RESULT: {}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element/810c1380-580f-45a8-b4f9-41efc556a935/value - {"text":"123456"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element/aa5cf62a-42fb-475f-ae2f-3d26cebb28f6/value - {"text":"123456"}
 RESULT: {"text":"123456"}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element - {"using":"xpath","value":"//input[contains(@class,'login-button')]"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element - {"using":"xpath","value":"//input[contains(@class,'login-button')]"}
 RESULT: {"using":"xpath","value":"//input[contains(@class,'login-button')]"}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element/a7729915-be1d-48e0-9560-aecc352477a0/click - {}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element/db2a6e2e-6c05-4ac2-8376-7c6dbe38e4d6/click - {}
 RESULT: {}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element - {"using":"css selector","value":"div .header-links [href='/customer/info']"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element - {"using":"css selector","value":"div .header-links [href='/customer/info']"}
 RESULT: {"using":"css selector","value":"div .header-links [href='/customer/info']"}
-COMMAND: GET /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element/67a19b55-4525-40f0-b017-25e6453dd4dc/text - {}
+COMMAND: GET /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element/cc0d957e-e0c7-4eb8-88c8-9534a93d6d65/text - {}
 RESULT: {}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element - {"using":"css selector","value":"div.header-links a[href='/logout']"}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element - {"using":"css selector","value":"div.header-links a[href='/logout']"}
 RESULT: {"using":"css selector","value":"div.header-links a[href='/logout']"}
-COMMAND: POST /session/81862d60-57bf-4970-95c0-e3a3cfc88f92/element/75278d6b-322c-4b7a-b050-c507ef60aef1/click - {}
+COMMAND: POST /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c/element/c656e8ff-150e-4198-8599-bb8cf1b0c7c8/click - {}
 RESULT: {}
-COMMAND: DELETE /session/81862d60-57bf-4970-95c0-e3a3cfc88f92 - {}
+COMMAND: DELETE /session/ce9a8051-8a49-4f1f-99af-e5d3e0cb3d1c - {}
 RESULT: {}
 ]]></system-out>
     </testcase>

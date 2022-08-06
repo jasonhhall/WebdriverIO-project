@@ -1,43 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="TEST LOGIN PAGE" timestamp="2022-08-03T01:02:59" time="3.485" tests="1" failures="0" errors="0" skipped="0">
+  <testsuite name="TEST LOGIN PAGE" timestamp="2022-08-06T01:20:27" time="6.627" tests="1" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="TEST LOGIN PAGE"/>
-      <property name="capabilities" value="chromeheadless.104_0_5112_79.darwin"/>
+      <property name="capabilities" value="chrome.98_0_4758_102.linux"/>
       <property name="file" value="./test/specs/login.spec.js"/>
     </properties>
-    <testcase classname="chromeheadless.104_0_5112_79.darwin.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="3.484">
+    <testcase classname="chrome.98_0_4758_102.linux.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="6.621">
       <system-out><![CDATA[
-COMMAND: findElement - {"using":"css selector","value":"#Email"}
-COMMAND: navigateTo - {"url":"http://demowebshop.tricentis.com/login"}
-RESULT: undefined
-COMMAND: findElement - {"using":"css selector","value":"#Email"}
-RESULT: undefined
-COMMAND: elementClear - {"elementId":"ELEMENT-1"}
-RESULT: undefined
-COMMAND: elementSendKeys - {"elementId":"ELEMENT-1","text":"jason.hall@test123.com"}
-RESULT: undefined
-COMMAND: findElement - {"using":"css selector","value":"#Password"}
-RESULT: undefined
-COMMAND: elementClear - {"elementId":"ELEMENT-2"}
-RESULT: undefined
-COMMAND: elementSendKeys - {"elementId":"ELEMENT-2","text":"123456"}
-RESULT: undefined
-COMMAND: findElement - {"using":"xpath","value":"//input[contains(@class,'login-button')]"}
-RESULT: undefined
-COMMAND: elementClick - {"elementId":"ELEMENT-3"}
-RESULT: undefined
-COMMAND: findElement - {"using":"css selector","value":"div .header-links [href='/customer/info']"}
-RESULT: undefined
-COMMAND: getElementText - {"elementId":"ELEMENT-4"}
-RESULT: undefined
-COMMAND: findElement - {"using":"css selector","value":"div.header-links a[href='/logout']"}
-RESULT: undefined
-COMMAND: elementClick - {"elementId":"ELEMENT-5"}
-RESULT: undefined
-COMMAND: deleteSession - {}
-RESULT: undefined
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element - {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/url - {"url":"http://demowebshop.tricentis.com/login"}
+RESULT: {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/elements - {"using":"css selector","value":"#Email"}
+RESULT: {"url":"http://demowebshop.tricentis.com/login"}
+RESULT: {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element - {"using":"css selector","value":"#Email"}
+RESULT: {"using":"css selector","value":"#Email"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element/2adccf84-956f-4676-a3dc-f7c8881246c2/clear - {}
+RESULT: {}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element/2adccf84-956f-4676-a3dc-f7c8881246c2/value - {"text":"jason.hall@test123.com"}
+RESULT: {"text":"jason.hall@test123.com"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element - {"using":"css selector","value":"#Password"}
+RESULT: {"using":"css selector","value":"#Password"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element/c799862b-232e-4abc-9235-1ec87e7a1699/clear - {}
+RESULT: {}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element/c799862b-232e-4abc-9235-1ec87e7a1699/value - {"text":"123456"}
+RESULT: {"text":"123456"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element - {"using":"xpath","value":"//input[contains(@class,'login-button')]"}
+RESULT: {"using":"xpath","value":"//input[contains(@class,'login-button')]"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element/a8d36718-82b1-46b9-90e7-5d8339eec3e9/click - {}
+RESULT: {}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element - {"using":"css selector","value":"div .header-links [href='/customer/info']"}
+RESULT: {"using":"css selector","value":"div .header-links [href='/customer/info']"}
+COMMAND: GET /session/b670737344aab0002c98582c353ad8e9/element/946487f4-e6a6-4cfd-ad9c-1617489d8fea/text - {}
+RESULT: {}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element - {"using":"css selector","value":"div.header-links a[href='/logout']"}
+RESULT: {"using":"css selector","value":"div.header-links a[href='/logout']"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/element/49bd62e0-fdc7-47b1-9037-8d64dbd02723/click - {}
+RESULT: {}
+COMMAND: GET /session/b670737344aab0002c98582c353ad8e9/se/log/types - {}
+RESULT: {}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/se/log - {"type":"driver"}
+COMMAND: POST /session/b670737344aab0002c98582c353ad8e9/se/log - {"type":"browser"}
+RESULT: {"type":"browser"}
+RESULT: {"type":"driver"}
+COMMAND: DELETE /session/b670737344aab0002c98582c353ad8e9 - {}
+RESULT: {}
 ]]></system-out>
     </testcase>
   </testsuite>

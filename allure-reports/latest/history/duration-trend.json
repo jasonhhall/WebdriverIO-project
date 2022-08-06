@@ -1,0 +1,19 @@
+[ {
+  "buildOrder" : 2,
+  "reportUrl" : "../2/index.html",
+  "reportName" : "default",
+  "data" : {
+    "duration" : 3382
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "../1/index.html",
+  "reportName" : "default",
+  "data" : {
+    "duration" : 3382
+  }
+}, {
+  "data" : {
+    "duration" : 3382
+  }
+} ]

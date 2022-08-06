@@ -1,25 +1,12 @@
+const allure = require('allure-commandline');
+
 exports.config = {
+    
     //
-    // ====================
-    // Runner Configuration
-    // ====================
-    //
-    //
-    // ==================
-    // Specify Test Files
-    // ==================
-    // Define which test specs should run. The pattern is relative to the directory
-    // from which `wdio` was called.
-    //
-    // The specs are defined as an array of spec files (optionally using wildcards
-    // that will be expanded). The test for each spec file will be run in a separate
-    // worker process. In order to have a group of spec files run in the same worker
-    // process simply enclose them in an array within the specs array.
-    //
-    // If you are calling `wdio` from an NPM script (see https://docs.npmjs.com/cli/run-script),
-    // then the current working directory is where your `package.json` resides, so `wdio`
-    // will be called from there.
-    //
+    // ===================
+    // Test Configurations
+    // ===================
+    // Define all options that are relevant for the WebdriverIO instance here
     specs: [
         './test/specs/**/*.js'
     ],
@@ -29,58 +16,6 @@ exports.config = {
     exclude: [
         // 'path/to/excluded/files'
     ],
-    //
-    // ============
-    // Capabilities
-    // ============
-    // Define your capabilities here. WebdriverIO can run multiple capabilities at the same
-    // time. Depending on the number of capabilities, WebdriverIO launches several test
-    // sessions. Within your capabilities you can overwrite the spec and exclude options in
-    // order to group specific specs to a specific capability.
-    //
-    // First, you can define how many instances should be started at the same time. Let's
-    // say you have 3 different capabilities (Chrome, Firefox, and Safari) and you have
-    // set maxInstances to 1; wdio will spawn 3 processes. Therefore, if you have 10 spec
-    // files and you set maxInstances to 10, all spec files will get tested at the same time
-    // and 30 processes will get spawned. The property handles how many capabilities
-    // from the same test should run tests.
-    //
-    maxInstances: 10,
-    //
-    // If you have trouble getting all important capabilities together, check out the
-    // Sauce Labs platform configurator - a great tool to configure your capabilities:
-    // https://docs.saucelabs.com/reference/platforms-configurator
-    //
-    capabilities: [{
-    
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'chrome',
-        'goog:chromeOptions':
-        {
-            args:
-                [
-                    'disable-infobars',
-                    'disable-popup-blocking',
-                    'disable-notifications',
-                    '--start-maximized',
-                    '--start-fullscreen'
-                ],
-        },
-        acceptInsecureCerts: true
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-    }],
-    //
-    // ===================
-    // Test Configurations
-    // ===================
-    // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'trace',
@@ -144,24 +79,27 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters:
-        [
-            'spec',
-            // ['json', {
-            //   outputDir: './test/reports/json-results'
-            //   }],
-
-            ['junit', {
-                outputDir: './test/reports/junit-results',
-                outputFileFormat: function (options) {
-                    return `results-${options.cid}.${options.capabilities}.xml`
-                }
-            }],
-
-        ],
-        services: [new DeltaService(delta_config)],
-
-    
+    reporters: [
+        'spec',
+  
+        ['allure', {
+            outputDir: './allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: true,
+        }],
+  
+        ['json', {
+          outputDir: './json-results'
+          }],
+  
+        ['junit', {
+          outputDir: './junit-results',
+          outputFileFormat: function(options) {
+                return `results-${options.cid}.${options.capabilities}.xml`
+            }
+        }],
+  
+      ],
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -292,11 +230,29 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    //  onComplete: function() {
-    // },
+     onComplete: function() {
+        const reportError = new Error('Could not generate Allure report')
+        const generation = allure(['generate', 'allure-results', '--clean'])
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(
+                () => reject(reportError),
+                5000)
+
+            generation.on('exit', function(exitCode) {
+                clearTimeout(generationTimeout)
+
+                if (exitCode !== 0) {
+                    return reject(reportError)
+                }
+
+                console.log('Allure report successfully generated')
+                resolve()
+            })
+        })
+    }
     
-    afterStep: function (test, scenario, { error, duration, passed }) {
-      },
+    // afterStep: function (test, scenario, { error, duration, passed }) {
+    //   },
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session
