@@ -5,8 +5,8 @@
     "main": "./node_modules/.bin/wdio",
     "scripts": {
         "chrome": "npx wdio run ./test/config/chrome.conf.js",
-        "remote": "npx wdio run ./test/config/remote.conf.js",
-        "local": "npx wdio run ./test/config/docker.conf.js",
+        "remote": "npx wdio run ./test/config/docker.conf.js",
+        "test": "npx wdio run ./test/config/remote.conf.js",
         "spec": "npx wdio run ./test/config/wdio.local.conf.js --spec",
         "suite": "npx wdio run ./test/config/wdio.local.conf.js --suite",
         "selenium": "npx wdio run ./test/config/selenium-standalone.conf.js",

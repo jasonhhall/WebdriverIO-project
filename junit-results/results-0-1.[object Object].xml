@@ -1,43 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="TEST LOGIN PAGE" timestamp="2022-08-03T00:57:50" time="3.242" tests="1" failures="0" errors="0" skipped="0">
+  <testsuite name="TEST LOGIN PAGE" timestamp="2022-08-03T01:03:05" time="3.279" tests="1" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="TEST LOGIN PAGE"/>
-      <property name="capabilities" value="chrome.104_0_5112_79.darwin"/>
+      <property name="capabilities" value="chromeheadless.104_0_5112_79.darwin"/>
       <property name="file" value="./test/specs/login2.spec.js"/>
     </properties>
-    <testcase classname="chrome.104_0_5112_79.darwin.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="3.24">
+    <testcase classname="chromeheadless.104_0_5112_79.darwin.TEST_LOGIN_PAGE" name="should allow access with correct creds" time="3.278">
       <system-out><![CDATA[
 COMMAND: findElement - {"using":"css selector","value":"#Email"}
 COMMAND: navigateTo - {"url":"http://demowebshop.tricentis.com/login"}
 RESULT: undefined
-RESULT: undefined
-COMMAND: findElements - {"using":"css selector","value":"#Email"}
-RESULT: undefined
 COMMAND: findElement - {"using":"css selector","value":"#Email"}
 RESULT: undefined
-COMMAND: elementClear - {"elementId":"ELEMENT-2"}
+COMMAND: elementClear - {"elementId":"ELEMENT-1"}
 RESULT: undefined
-COMMAND: elementSendKeys - {"elementId":"ELEMENT-2","text":"jason.hall@test123.com"}
+COMMAND: elementSendKeys - {"elementId":"ELEMENT-1","text":"jason.hall@test123.com"}
 RESULT: undefined
 COMMAND: findElement - {"using":"css selector","value":"#Password"}
 RESULT: undefined
-COMMAND: elementClear - {"elementId":"ELEMENT-3"}
+COMMAND: elementClear - {"elementId":"ELEMENT-2"}
 RESULT: undefined
-COMMAND: elementSendKeys - {"elementId":"ELEMENT-3","text":"123456"}
+COMMAND: elementSendKeys - {"elementId":"ELEMENT-2","text":"123456"}
 RESULT: undefined
 COMMAND: findElement - {"using":"xpath","value":"//input[contains(@class,'login-button')]"}
 RESULT: undefined
-COMMAND: elementClick - {"elementId":"ELEMENT-4"}
+COMMAND: elementClick - {"elementId":"ELEMENT-3"}
 RESULT: undefined
 COMMAND: findElement - {"using":"css selector","value":"div .header-links [href='/customer/info']"}
 RESULT: undefined
-COMMAND: getElementText - {"elementId":"ELEMENT-5"}
+COMMAND: getElementText - {"elementId":"ELEMENT-4"}
 RESULT: undefined
 COMMAND: findElement - {"using":"css selector","value":"div.header-links a[href='/logout']"}
 RESULT: undefined
-COMMAND: elementClick - {"elementId":"ELEMENT-6"}
+COMMAND: elementClick - {"elementId":"ELEMENT-5"}
 RESULT: undefined
 COMMAND: deleteSession - {}
 RESULT: undefined
