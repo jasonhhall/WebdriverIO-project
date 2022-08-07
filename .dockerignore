@@ -1,2 +1,4 @@
 node_modules
 wdio-logs
+allure-report
+reports

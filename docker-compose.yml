@@ -9,7 +9,7 @@ services:
     ports:
       - "5050:5050"
     volumes:
-      - ${PWD}/allure-results:/app/allure-results
+      - ${PWD}/reports/allure-results:/app/allure-results
       - ${PWD}/allure-report:/app/default-report
 
   allure-ui:
