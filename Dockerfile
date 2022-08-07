@@ -60,28 +60,15 @@ RUN google-chrome --version
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 
 # INSTALL PACKAGES
-WORKDIR /usr/wdiowithoutgrid/
-COPY package*.json ./
-COPY . .
-EXPOSE 8080
+WORKDIR /usr/app
+COPY . /usr/app
 RUN npm install
 
 # VERIFICATION
 
-# Display versions of local tools
-RUN echo  " node version:    $(node -v) \n" \
-  "npm version:     $(npm -v) \n" \
-  "yarn version:    $(yarn -v) \n" \
-  "debian version:  $(cat /etc/debian_version) \n" \
-  "user:            $(whoami) \n"
-RUN ls
-
 # ON RUNNING THE IMAGE THIS COMMAND WILL BE TRIGGERED BY DEFAULT
-ENTRYPOINT ["npm", "run"]
-
-CMD ["docker"]
-
-
+#  ENTRYPOINT ["npm", "run"]
+#  CMD ["docker"]
 
 # # # FROM ianwalter/puppeteer:latest
 # # # WORKDIR /app
