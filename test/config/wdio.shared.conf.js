@@ -83,7 +83,7 @@ exports.config = {
         'spec',
   
         ['allure', {
-            outputDir: './reports/allure-results',
+            outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: true,
         }],
@@ -232,7 +232,7 @@ exports.config = {
      */
      onComplete: function() {
         const reportError = new Error('Could not generate Allure report')
-        const generation = allure(['generate', './reports/allure-results', '--clean'])
+        const generation = allure(['generate', 'allure-results', '--clean'])
         return new Promise((resolve, reject) => {
             const generationTimeout = setTimeout(
                 () => reject(reportError),

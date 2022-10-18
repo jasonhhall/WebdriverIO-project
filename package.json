@@ -6,6 +6,7 @@
     "scripts": {
         "e2e":"npm run docker && npm run allure",
         "chrome": "npx wdio run ./test/config/chrome.conf.js",
+        "headless": "npx wdio run ./test/config/chrome.headless.conf.js",
         "docker": "npx wdio run ./test/config/docker.conf.js",
         "remote": "npx wdio run ./test/config/remote.conf.js",
         "spec": "npx wdio run ./test/config/wdio.local.conf.js --spec",
@@ -19,7 +20,7 @@
         "docker:selenium-standalone": "docker run -it -p 4444:4444 webdriverio/selenium-standalone",
         "selenium:server": "npx selenium-standalone install && npx selenium-standalone start",
         "allure:history": "mkdir -p allure-report/history ./allure-results/history && cp -a allure-report/history ./allure-results/",
-        "allure": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open",
+        "allure": "node_modules/.bin/allure generate --clean ./allure-results && allure open",
         "junit-report": "node_modules/.bin/junit-viewer --results=./test/reports/junit-results --save=junit-results.html && open junit-results.html"
     },
     "devDependencies": {
