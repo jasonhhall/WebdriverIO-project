@@ -1,0 +1,173 @@
+{
+  "uid" : "c8fbf9b0431ff535",
+  "name" : "should allow access with correct creds",
+  "fullName" : "TEST LOGIN PAGE.should allow access with correct creds",
+  "historyId" : "9cb2a8bc433d3921a0f82be495349838",
+  "time" : {
+    "start" : 1666061490557,
+    "stop" : 1666061494334,
+    "duration" : 3777
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 5,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Login",
+      "time" : {
+        "start" : 1666061490558,
+        "stop" : 1666061490559,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-2"
+  }, {
+    "name" : "suite",
+    "value" : "TEST LOGIN PAGE"
+  }, {
+    "name" : "testClass",
+    "value" : "TEST LOGIN PAGE"
+  }, {
+    "name" : "testMethod",
+    "value" : "should allow access with correct creds"
+  }, {
+    "name" : "package",
+    "value" : "TEST LOGIN PAGE"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-106.0.0.0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "55fb99c71ef2ccb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666061490557,
+        "stop" : 1666061494685,
+        "duration" : 4128
+      }
+    }, {
+      "uid" : "e446522291907906",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666061490527,
+        "stop" : 1666061495349,
+        "duration" : 4822
+      }
+    }, {
+      "uid" : "73581ec3208a23b4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666061235503,
+        "stop" : 1666061239416,
+        "duration" : 3913
+      }
+    }, {
+      "uid" : "3959c20851ca193",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666061235492,
+        "stop" : 1666061239956,
+        "duration" : 4464
+      }
+    }, {
+      "uid" : "b70d8e3103137bbe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666061235490,
+        "stop" : 1666061239413,
+        "duration" : 3923
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "ab2304620c27678d",
+        "reportUrl" : "../3/index.html#testresult/ab2304620c27678d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1666061490557,
+          "stop" : 1666061494685,
+          "duration" : 4128
+        }
+      }, {
+        "uid" : "f57991e230e1c59c",
+        "reportUrl" : "../2/index.html#testresult/f57991e230e1c59c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1666061235503,
+          "stop" : 1666061239416,
+          "duration" : 3913
+        }
+      }, {
+        "uid" : "db9fb1a4f0af5de1",
+        "reportUrl" : "../1/index.html#testresult/db9fb1a4f0af5de1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1666061235503,
+          "stop" : 1666061239416,
+          "duration" : 3913
+        }
+      }, {
+        "uid" : "f4430f87fa1cbf2c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1666061235503,
+          "stop" : 1666061239416,
+          "duration" : 3913
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c8fbf9b0431ff535.json",
+  "parameterValues" : [ "Chrome-106.0.0.0" ]
+}

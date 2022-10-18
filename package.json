@@ -12,8 +12,7 @@
         "spec": "npx wdio run ./test/config/wdio.local.conf.js --spec",
         "suite": "npx wdio run ./test/config/wdio.local.conf.js --suite",
         "selenium": "npx wdio run ./test/config/selenium-standalone.conf.js",
-        "build": "docker build -t test/webshopdemo .",
-        "docker:run": "docker run -it test/webshopdemo pwd",
+     
         "local:up":"docker-compose -f docker-compose.yml -f docker-compose.local.yml up",
         "docker:allure": "docker-compose up -d allure allure-ui",
         "docker:selenium":"docker-compose up -d chrome firefox selenium-hub",

@@ -1,0 +1,85 @@
+{
+  "uid" : "46a2a996bb421f67",
+  "name" : "should allow access with correct creds",
+  "fullName" : "TEST LOGIN PAGE.should allow access with correct creds",
+  "historyId" : "9cb2a8bc433d3921a0f82be495349838",
+  "time" : {
+    "start" : 1666061235490,
+    "stop" : 1666061239413,
+    "duration" : 3923
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Login",
+      "time" : {
+        "start" : 1666061235492,
+        "stop" : 1666061235492,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-2"
+  }, {
+    "name" : "suite",
+    "value" : "TEST LOGIN PAGE"
+  }, {
+    "name" : "testClass",
+    "value" : "TEST LOGIN PAGE"
+  }, {
+    "name" : "testMethod",
+    "value" : "should allow access with correct creds"
+  }, {
+    "name" : "package",
+    "value" : "TEST LOGIN PAGE"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-106.0.0.0"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "46a2a996bb421f67.json",
+  "parameterValues" : [ "Chrome-106.0.0.0" ]
+}
