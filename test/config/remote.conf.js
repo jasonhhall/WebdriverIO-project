@@ -14,20 +14,25 @@ exports.config = {
 
         capabilities: [
             {
+                maxInstances: 1,
                 browserName: 'chrome',
                 'goog:chromeOptions': {
-                    args: ['--no-sandbox',
-                        '--headless',
+                    args: [
+                        '--no-sandbox',
                         '--disable-infobars',
-                        '--disable-gpu',]
+                        '--headless',
+                        '--disable-gpu',
+                        '--window-size=1440,735'
+                    ]
+
                 }
             },
-            {
-                browserName: 'firefox',
-                'moz:firefoxOptions': {
-                    args: ['-headless']
-                }
-            },
+            // {
+            //     browserName: 'firefox',
+            //     'moz:firefoxOptions': {
+            //         args: ['-headless']
+            //     }
+            // },
         ],
     }
 }

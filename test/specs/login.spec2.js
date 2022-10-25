@@ -4,7 +4,7 @@ let MainPage = new Page();
 require('dotenv').config();
 
 
-describe('TEST LOGIN PAGE', () => {
+describe('TEST LOGIN PAGE 2', () => {
 
         it('should allow access with correct creds', async () => {
             await LoginPage.open()

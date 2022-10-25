@@ -1,82 +1,93 @@
-FROM node:12.18.3-buster
-
-# INSTALL LIBRARIES & FONTS 
-RUN apt-get update && \
-  apt-get install --no-install-recommends -y \
-  libgtk2.0-0 \
-  libgtk-3-0 \
-  libnotify-dev \
-  libgconf-2-4 \
-  libgbm-dev \
-  libnss3 \
-  libxss1 \
-  libasound2 \
-  libxtst6 \
-  xauth \
-  xvfb \
-  fonts-arphic-bkai00mp \
-  fonts-arphic-bsmi00lp \
-  fonts-arphic-gbsn00lp \
-  fonts-arphic-gkai00mp \
-  fonts-arphic-ukai \
-  fonts-arphic-uming \
-  ttf-wqy-zenhei \
-  ttf-wqy-microhei \
-  xfonts-wqy \
-  && rm -rf /var/lib/apt/lists/*
-
-# INSTALL NPM 
-RUN npm install -g npm@latest
-RUN npm --version
-# INSTALL YARN 
-RUN npm install -g yarn@latest --force
-RUN yarn --version
-
-# ENVIRONMENT VARIABLES
-# good colors for most applications
-ENV TERM xterm
-# avoid million NPM install messages
-ENV npm_config_loglevel warn
-# allow installing when the main user is root
-ENV npm_config_unsafe_perm true
-
-# Node libraries
-RUN node -p process.versions
+FROM timbru31/java-node:latest
+WORKDIR /app
+ADD . /app
 
 # INSTALL CHROME
 
 # Chrome dependencies
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 RUN apt-get update
-RUN apt-get install -y fonts-liberation libappindicator3-1 xdg-utils
+RUN apt --fix-broken install
+RUN apt-get install google-chrome-stable -y
 
- ENV CHROME_VERSION 87.0.4280.66
-RUN wget -O /usr/src/google-chrome-stable_current_amd64.deb "http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}-1_amd64.deb" && \
-  dpkg -i /usr/src/google-chrome-stable_current_amd64.deb ; \
-  apt-get install -f -y && \
-  rm -f /usr/src/google-chrome-stable_current_amd64.deb
-RUN google-chrome --version
-# "fake" dbus address to prevent errors
-# https://github.com/SeleniumHQ/docker-selenium/issues/87
-ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
-
-# INSTALL PACKAGES
-WORKDIR /usr/app
-COPY . /usr/app
 RUN npm install
 
-# VERIFICATION
+CMD npx npm run remote
 
-# ON RUNNING THE IMAGE THIS COMMAND WILL BE TRIGGERED BY DEFAULT
-#  ENTRYPOINT ["npm", "run"]
-#  CMD ["docker"]
 
-# # # FROM ianwalter/puppeteer:latest
-# # # WORKDIR /app
-# # # ADD . /app
+# # FROM node:12.18.3-buster
 
-# # # RUN npm install
+# # # INSTALL LIBRARIES & FONTS 
+# # RUN apt-get update && \
+# #   apt-get install --no-install-recommends -y \
+# #   libgtk2.0-0 \
+# #   libgtk-3-0 \
+# #   libnotify-dev \
+# #   libgconf-2-4 \
+# #   libgbm-dev \
+# #   libnss3 \
+# #   libxss1 \
+# #   libasound2 \
+# #   libxtst6 \
+# #   xauth \
+# #   xvfb \
+# #   fonts-arphic-bkai00mp \
+# #   fonts-arphic-bsmi00lp \
+# #   fonts-arphic-gbsn00lp \
+# #   fonts-arphic-gkai00mp \
+# #   fonts-arphic-ukai \
+# #   fonts-arphic-uming \
+# #   ttf-wqy-zenhei \
+# #   ttf-wqy-microhei \
+# #   xfonts-wqy \
+# #   && rm -rf /var/lib/apt/lists/*
 
-# # # CMD npm run remote
+# # # INSTALL NPM 
+# # RUN npm install -g npm@latest
+# # RUN npm --version
+# # # INSTALL YARN 
+# # RUN npm install -g yarn@latest --force
+# # RUN yarn --version
+
+# # # ENVIRONMENT VARIABLES
+# # # good colors for most applications
+# # ENV TERM xterm
+# # # avoid million NPM install messages
+# # ENV npm_config_loglevel warn
+# # # allow installing when the main user is root
+# # ENV npm_config_unsafe_perm true
+
+# # # Node libraries
+# # RUN node -p process.versions
+
+# # # INSTALL CHROME
+
+# # # Chrome dependencies
+# # RUN apt-get update
+# # RUN apt-get install -y fonts-liberation libappindicator3-1 xdg-utils
+
+# #  ENV CHROME_VERSION 87.0.4280.66
+# # RUN wget -O /usr/src/google-chrome-stable_current_amd64.deb "http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}-1_amd64.deb" && \
+# #   dpkg -i /usr/src/google-chrome-stable_current_amd64.deb ; \
+# #   apt-get install -f -y && \
+# #   rm -f /usr/src/google-chrome-stable_current_amd64.deb
+# # RUN google-chrome --version
+# # # "fake" dbus address to prevent errors
+# # # https://github.com/SeleniumHQ/docker-selenium/issues/87
+# # ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
+
+# # # INSTALL PACKAGES
+# # WORKDIR /usr/app
+# # COPY . /usr/app
+# # RUN npm install
+
+# # # # VERIFICATION
+
+# # # # ON RUNNING THE IMAGE THIS COMMAND WILL BE TRIGGERED BY DEFAULT
+# #  ENTRYPOINT ["npm", "run"]
+# #  CMD ["remote"]
+
 # # FROM node:12
 # # RUN apt-get update && apt-get install -y openjdk-8-jdk
 
@@ -108,8 +119,8 @@ RUN npm install
 #     /tmp/* \
 #     /root/.npm
 
-# # add a simple script that can auto-detect the appropriate JAVA_HOME value
-# # based on whether the JDK or only the JRE is installed
+# # # add a simple script that can auto-detect the appropriate JAVA_HOME value
+# # # based on whether the JDK or only the JRE is installed
 # FROM alpine:3.5
 
 # LABEL maintainer "wrlennon"
@@ -189,4 +200,4 @@ RUN npm install
 # ENTRYPOINT [ "npm", "run" ]
 
 # # The main purpose of a CMD is to provide default commands to an executing container
-# CMD ["docker"]
+# CMD ["remote"]
